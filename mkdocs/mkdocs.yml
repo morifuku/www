@@ -14,4 +14,4 @@ theme:
     locale: ja
 nav:
     - Home:
-        - index.md
+        - www.森福.net: index.md
