@@ -14,10 +14,10 @@
 #git push -u origin main
 #
 # MkDocks更新
-cd /Users/morifuku/SynologyDrive/Projects/Blog/mkdocs
+cd /Users/morifuku/SynologyDrive/Projects/www/mkdocs
 mkdocs build
 cp -rf site/ ../docs/
-cd /Users/morifuku/SynologyDrive/Projects/Blog/
+cd /Users/morifuku/SynologyDrive/Projects/www/
 git pull
 git add .
 git commit -m "auto commit"
