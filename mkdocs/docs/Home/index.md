@@ -1,6 +1,6 @@
 
 
-![ladybug5G](img/ladybug5G.jpg)
+![ladybug5G](ladybug5G.jpg)
 
 #### 森福茂
 
