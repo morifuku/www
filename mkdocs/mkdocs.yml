@@ -17,4 +17,4 @@ theme:
     - navigation.tabs
 nav:
     - Home:
-        - index.md
+        - Home/index.md
