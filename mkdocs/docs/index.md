@@ -16,6 +16,3 @@
 
 * [https://www.facebook.com/morifuku](https://www.facebook.com/morifuku)
 * [https://www.linkedin.com/in/morifuku/](https://www.linkedin.com/in/morifuku/)
-
-A
-
