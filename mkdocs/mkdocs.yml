@@ -12,9 +12,6 @@ extra:
 theme:
     name: material
     locale: ja
-    features:
-    - navigation.sections
-    - navigation.tabs
 nav:
     - Home:
-        - Home/www.morifuku.net.md
+        - index.md
