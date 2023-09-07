@@ -1,1 +1,1 @@
-# www
+# wiki.morifuku.net
