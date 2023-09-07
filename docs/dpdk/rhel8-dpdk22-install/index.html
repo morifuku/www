@@ -12,20 +12,24 @@
         <meta name="author" content="Shigeru Morifuku">
       
       
-        <link rel="canonical" href="https://blog.morifuku.net/">
+        <link rel="canonical" href="https://blog.morifuku.net/dpdk/rhel8-dpdk22-install/">
       
       
+        <link rel="prev" href="../../boot/matchbox/">
       
-      <link rel="icon" href="assets/images/ladybug5G32.ico">
+      
+        <link rel="next" href="../centos7-dpdk22-install/">
+      
+      <link rel="icon" href="../../assets/images/ladybug5G32.ico">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
     
     
       
-        <title>blog.morifuku.net</title>
+        <title>1. RHEL8にDPDK22インストール - blog.morifuku.net</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
       
       
 
@@ -41,7 +45,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -75,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#a" class="md-skip">
           Skip to content
         </a>
       
@@ -89,9 +93,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="blog.morifuku.net" class="md-header__button md-logo" aria-label="blog.morifuku.net" data-md-component="logo">
+    <a href="../.." title="blog.morifuku.net" class="md-header__button md-logo" aria-label="blog.morifuku.net" data-md-component="logo">
       
-  <img src="assets/images/favicon48.png" alt="logo">
+  <img src="../../assets/images/favicon48.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -107,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              森福茂のブログ
+              1. RHEL8にDPDK22インストール
             
           </span>
         </div>
@@ -179,13 +183,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="linux/" class="md-tabs__link">
+      <a href="../../linux/" class="md-tabs__link md-tabs__link--active">
         A. Linux編
       </a>
     </li>
@@ -201,7 +207,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="virtualization/" class="md-tabs__link">
+      <a href="../../virtualization/" class="md-tabs__link">
         B. Virtualization編
       </a>
     </li>
@@ -217,7 +223,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="application/" class="md-tabs__link">
+      <a href="../../application/" class="md-tabs__link">
         E. Application編
       </a>
     </li>
@@ -245,9 +251,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="blog.morifuku.net" class="md-nav__button md-logo" aria-label="blog.morifuku.net" data-md-component="logo">
+    <a href="../.." title="blog.morifuku.net" class="md-nav__button md-logo" aria-label="blog.morifuku.net" data-md-component="logo">
       
-  <img src="assets/images/favicon48.png" alt="logo">
+  <img src="../../assets/images/favicon48.png" alt="logo">
 
     </a>
     blog.morifuku.net
@@ -273,14 +279,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
       
       
       
@@ -289,7 +297,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           A. Linux編
@@ -302,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linux/" class="md-nav__link">
+      <a href="../../linux/" class="md-nav__link">
         概要
       </a>
     </li>
@@ -345,7 +353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="boot/matchbox/" class="md-nav__link">
+      <a href="../../boot/matchbox/" class="md-nav__link">
         1. OpenShiftのためのMatchBox設定
       </a>
     </li>
@@ -364,16 +372,18 @@
               
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
       
       
       
@@ -382,7 +392,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_1_3">
           <span class="md-nav__icon md-icon"></span>
           A-12. DPDK
@@ -393,11 +403,89 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="dpdk/rhel8-dpdk22-install/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          1. RHEL8にDPDK22インストール
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         1. RHEL8にDPDK22インストール
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a" class="md-nav__link">
+    A. はじめに
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    B. 手順
+  </a>
+  
+    <nav class="md-nav" aria-label="B. 手順">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#b1-python38" class="md-nav__link">
+    B.1 まず、python3.8のインストール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b2-mesonninja" class="md-nav__link">
+    B.2 つづいてMeson/Ninjaのインストール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b3-dpdk22" class="md-nav__link">
+    B.3 DPDK22のソースをダウンロードしてビルド/インストール
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    C. 今後
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -409,7 +497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dpdk/centos7-dpdk22-install/" class="md-nav__link">
+      <a href="../centos7-dpdk22-install/" class="md-nav__link">
         2. CentOS7にDPDK22インストール
       </a>
     </li>
@@ -465,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="virtualization/" class="md-nav__link">
+      <a href="../../virtualization/" class="md-nav__link">
         概要
       </a>
     </li>
@@ -514,7 +602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="application/" class="md-nav__link">
+      <a href="../../application/" class="md-nav__link">
         概要
       </a>
     </li>
@@ -557,7 +645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="oai5g/oai5g-ubu22/" class="md-nav__link">
+      <a href="../../oai5g/oai5g-ubu22/" class="md-nav__link">
         1. Docker/Ubuntu18でOAI5Gを動かす
       </a>
     </li>
@@ -595,8 +683,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -605,29 +691,49 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    ブログのテーマ
+  <a href="#a" class="md-nav__link">
+    A. はじめに
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    このブログの運営について
+  <a href="#b" class="md-nav__link">
+    B. 手順
   </a>
+  
+    <nav class="md-nav" aria-label="B. 手順">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#b1-python38" class="md-nav__link">
+    B.1 まず、python3.8のインストール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b2-mesonninja" class="md-nav__link">
+    B.2 つづいてMeson/Ninjaのインストール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b3-dpdk22" class="md-nav__link">
+    B.3 DPDK22のソースをダウンロードしてビルド/インストール
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    著者について
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    連絡先
+  <a href="#c" class="md-nav__link">
+    C. 今後
   </a>
   
 </li>
@@ -650,38 +756,68 @@
   
 
 
-<h1 id="_1">森福茂のブログ</h1>
-<p><img alt="Ladybug5G" src="img/ladybug5G.jpg" /></p>
-<h4 id="_2">ブログのテーマ</h4>
-<ul>
-<li>DPDK技術解説</li>
-<li>5GCN技術解説</li>
-<li>OpenShift技術解説</li>
-<li>とかとかとか</li>
-</ul>
-<h4 id="_3">このブログの運営について</h4>
-<ul>
-<li>このブログは、GitHub提供のPagesサービスで運営しています。</li>
-<li>このブログの原稿はマークダウンで書いています。</li>
-<li>MkDocsを使用して、オフラインで、マークダウンからHTMLへ変換しています。</li>
-</ul>
-<h4 id="_4">著者について</h4>
-<ul>
-<li>ネットワークノードのコードを書き続けるC/C++プログラマー</li>
-<li>1990年代後半より固定電話ネットワーク、携帯電話ネットワークで活動しています。</li>
-</ul>
-<h4 id="_5">連絡先</h4>
-<p>下記サイトのDMでご連絡ください。</p>
-<ul>
-<li><a href="https://qiita.com/morifuku">https://qiita.com/morifuku</a></li>
-<li>
-<p><a href="https://twitter.com/morifuku">https://twitter.com/morifuku</a></p>
-</li>
-<li>
-<p><a href="https://www.facebook.com/morifuku">https://www.facebook.com/morifuku</a></p>
-</li>
-<li><a href="https://www.linkedin.com/in/morifuku/">https://www.linkedin.com/in/morifuku/</a></li>
-</ul>
+  <h1>1. RHEL8にDPDK22インストール</h1>
+
+<p>2023/9/5更新</p>
+<h2 id="a">A. はじめに</h2>
+<p>我が家のNATサーバとなっている、ベアメタルのRHEL8.8機にDPDK対応のNIC（Intel I350）が入っているので、DPDK SDKの最新LTS(22.11.2)を入れてみました。そのときのメモです。</p>
+<p>注：本記事記載の操作はrootアカウントで行っています。十分ご注意ください。</p>
+<pre><code># cat /etc/redhat-release
+Red Hat Enterprise Linux release 8.8 (Ootpa)
+# lspci | grep Ethernet
+00:1f.6 Ethernet controller: Intel Corporation Ethernet Connection (2) I219-V
+01:00.0 Ethernet controller: Intel Corporation I350 Gigabit Network Connection (rev 01)
+01:00.1 Ethernet controller: Intel Corporation I350 Gigabit Network Connection (rev 01)
+</code></pre>
+<h2 id="b">B. 手順</h2>
+<h3 id="b1-python38">B.1 まず、python3.8のインストール</h3>
+<p>DPDK22はpython3.6ではビルドできず、python3.7以降にする必要があります。</p>
+<pre><code># python3 -V
+Python 3.6.8
+# yum install python38
+# python3 -V
+Python 3.8.16
+# pip3 -V
+pip 19.3.1 from /usr/lib/python3.8/site-packages/pip (python 3.8)
+</code></pre>
+<h3 id="b2-mesonninja">B.2 つづいてMeson/Ninjaのインストール</h3>
+<pre><code># pip3 install pyelftools
+# pip3 install meson ninja
+# meson --version
+1.2.1
+# ninja --version
+1.11.1.git.kitware.jobserver-1
+</code></pre>
+<h3 id="b3-dpdk22">B.3 DPDK22のソースをダウンロードしてビルド/インストール</h3>
+<p>LTS（long term support）バージョンを入れないと余計な苦労をするハメになるので、ちゃんと<a href="https://core.dpdk.org/download/">ここ</a>から最新LTSバージョンをダウンロードします。</p>
+<p>なお、2023/9/1時点のLTSは22.11.2となっています。</p>
+<pre><code># cd /home
+# wget https://fast.dpdk.org/rel/dpdk-22.11.2.tar.xz
+# tar xJvf dpdk-22.11.2.tar.xz
+</code></pre>
+<p>Meson/Ninjaでビルド/インストールします。</p>
+<pre><code># cd dpdk-stable-22.11.2/
+# meson build
+# cd build
+# ninja
+# ninja install
+</code></pre>
+<p>以上でビルドとインストールは完了。恐ろしく簡単でした(時間はかかります)。/usr/local/binや
+/usr/local/includeにSDKの各種ファイルがちゃんとインストールされています。</p>
+<pre><code># modprobe vfio-pci
+# modprobe uio_pci_generic
+# /usr/local/bin/dpdk-devbind.py -s
+
+Network devices using kernel driver
+===================================
+0000:00:1f.6 'Ethernet Connection (2) I219-V 15b8' if=eno1 drv=e1000e unused=vfio-pci,uio_pci_generic *Active*
+0000:01:00.0 'I350 Gigabit Network Connection 1521' if=enp1s0f0 drv=igb unused=vfio-pci,uio_pci_generic *Active*
+0000:01:00.1 'I350 Gigabit Network Connection 1521' if=enp1s0f1 drv=igb unused=vfio-pci,uio_pci_generic *Active*
+（後略）
+</code></pre>
+<p>DPDK対応ドライバのvfio-pciやuio_pci_genericも使えそうです。</p>
+<h2 id="c">C. 今後</h2>
+<p>dpdk-devbindとかDPDK22の各種ツールを試してみたいと思います。</p>
 
 
   
@@ -725,10 +861,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.sections", "navigation.tabs"], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
       
     
   </body>
