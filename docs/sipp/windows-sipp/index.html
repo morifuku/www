@@ -12,8 +12,10 @@
         <meta name="author" content="Shigeru Morifuku">
       
       
-        <link rel="canonical" href="https://wiki.morifuku.net/dpdk/DPDK20SDK%E3%82%92%E8%A9%A6%E3%81%99%E2%91%A0/">
+        <link rel="canonical" href="https://wiki.morifuku.net/sipp/windows-sipp/">
       
+      
+        <link rel="prev" href="../sipp-install/">
       
       
       <link rel="icon" href="../../assets/images/ladybug5G32.ico">
@@ -21,7 +23,7 @@
     
     
       
-        <title>DPDK20SDKを試す① - wiki.morifuku.net</title>
+        <title>2. WindowsにSIPp 3.7.1をデプロイする - wiki.morifuku.net</title>
       
     
     
@@ -75,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#windows-10sipp-631" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DPDK20SDKを試す①
+              2. WindowsにSIPp 3.7.1をデプロイする
             
           </span>
         </div>
@@ -211,13 +213,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../application/" class="md-tabs__link">
+      <a href="../../application/" class="md-tabs__link md-tabs__link--active">
         E. Application編
       </a>
     </li>
@@ -445,7 +449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rhel8-dpdk22-install/" class="md-nav__link">
+      <a href="../../dpdk/rhel8-dpdk22-install/" class="md-nav__link">
         1. RHEL8にDPDK22インストール
       </a>
     </li>
@@ -459,7 +463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../centos7-dpdk22-install/" class="md-nav__link">
+      <a href="../../dpdk/centos7-dpdk22-install/" class="md-nav__link">
         2. CentOS7にDPDK22インストール
       </a>
     </li>
@@ -535,14 +539,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
       
@@ -551,7 +557,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           E. Application編
@@ -626,16 +632,18 @@
               
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
       
       
       
@@ -644,7 +652,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3_3">
           <span class="md-nav__icon md-icon"></span>
           E-11 SIPp
@@ -657,7 +665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sipp/sipp-install/" class="md-nav__link">
+      <a href="../sipp-install/" class="md-nav__link">
         1. Ubuntu22にSIPp 3.7.1をデプロイする
       </a>
     </li>
@@ -669,11 +677,61 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../sipp/windows-sipp/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2. WindowsにSIPp 3.7.1をデプロイする
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         2. WindowsにSIPp 3.7.1をデプロイする
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#windows-10sipp-631" class="md-nav__link">
+    Windows 10でSIPp 6.3.1を動かす
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows 10でSIPp 6.3.1を動かす">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    経緯とか
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -717,100 +775,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    きっかけ
+  <a href="#windows-10sipp-631" class="md-nav__link">
+    Windows 10でSIPp 6.3.1を動かす
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mesonninja" class="md-nav__link">
-    まずMeson/Ninjaのインストールから
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dpdk20" class="md-nav__link">
-    DPDK20のソースをダウンロードしてビルド/インストール
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cd-homedpdk-stable-20111" class="md-nav__link">
-    cd /home/dpdk-stable-20.11.1
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#meson-build" class="md-nav__link">
-    meson build
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cd-build" class="md-nav__link">
-    cd build
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ninja" class="md-nav__link">
-    ninja
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ninja-install" class="md-nav__link">
-    ninja install
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#alias-dbusrlocalbindpdk-devbindpy" class="md-nav__link">
-    alias db='/usr/local/bin/dpdk-devbind.py'
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#modprobe-vfio-pci" class="md-nav__link">
-    modprobe vfio-pci
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#modprobe-uio_pci_generic" class="md-nav__link">
-    modprobe uio_pci_generic
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#db-s" class="md-nav__link">
-    db -s
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#network-devices-using-kernel-driver" class="md-nav__link">
-    Network devices using kernel driver
-  </a>
-  
-    <nav class="md-nav" aria-label="Network devices using kernel driver">
+    <nav class="md-nav" aria-label="Windows 10でSIPp 6.3.1を動かす">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    次回予告
+  <a href="#_1" class="md-nav__link">
+    経緯とか
   </a>
   
 </li>
@@ -838,57 +812,40 @@
   
 
 
-<h3 id="_1">きっかけ</h3>
-<p>ちょっとDPDK関係の仕事から離れている間に、DPDK SDKがバージョンが18から20とか21に上がっていた。現時点で最新のLTSバージョンをインストールしてみたら、バージョン18とは様子が随分変わっていたので、インストール手順のメモ。</p>
-<p>注：私はDPDKで遊ぶとき、クラッシュ前提のrootアカウントでやってます。以下の手順もそうなってますので、十分ご注意ください。</p>
-<h3 id="mesonninja">まずMeson/Ninjaのインストールから</h3>
-<p>18では<strong>make</strong>でビルドしていたが、20/21では<strong>make</strong>でも<strong>cmake</strong>でもなく、<strong>Meson/Ninja</strong>に変わっていた。</p>
-<pre><code># yum install python3-pip
-# pip3 install meson ninja --user
-</code></pre>
-<p>でmesonとninjaが/root/.local/bin/にインストールされるので.bash_profileに以下の行を入れてPATHを張る。</p>
-<pre><code>export PATH=$PATH:/root/.local/bin
-</code></pre>
-<p>これでmesonとninjaが実行できる。</p>
-<pre><code># meson --version
-0.57.1
+  <h1>2. WindowsにSIPp 3.7.1をデプロイする</h1>
 
-# ninja --version
-1.10.0.git.kitware.jobserver-1
+<h2 id="windows-10sipp-631">Windows 10でSIPp 6.3.1を動かす</h2>
+<p>「makeできた」ことだけ報告します。make方法は別途紹介したいと思います。</p>
+<pre><code>C:\Users\SMorifuku&gt;sipp -v
+
+ SIPp v3.6.1-RTPSTREAM.
+
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License as
+ published by the Free Software Foundation; either version 2 of
+ the License, or (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public
+ License along with this program; if not, write to the
+ Free Software Foundation, Inc.,
+ 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
+
+ Author: see source files.
 </code></pre>
-<h3 id="dpdk20">DPDK20のソースをダウンロードしてビルド/インストール</h3>
-<p>LTS（long term support）バージョンを入れないと余計な苦労をするハメになるので、ちゃんと<a href="https://core.dpdk.org/download/">ここ</a>からLTSバージョンをダウンロードする。</p>
-<pre><code># cd /home
-# wget https://fast.dpdk.org/rel/dpdk-20.11.1.tar.xz
-# tar xJvf dpdk-20.11.1.tar.xz
-# cd dpdk-stable-20.11.1
-</code></pre>
-<p>Meson/Ninjaでビルド/インストールする。</p>
-<p>`</p>
-<h1 id="cd-homedpdk-stable-20111">cd /home/dpdk-stable-20.11.1</h1>
-<h1 id="meson-build">meson build</h1>
-<h1 id="cd-build">cd build</h1>
-<h1 id="ninja">ninja</h1>
-<h1 id="ninja-install">ninja install</h1>
-<p>`
-以上でビルドとインストールは完了。恐ろしく簡単でした。/usr/local/binや
-/usr/local/includeにSDKの各種ファイルがちゃんとインストールされている。</p>
-<p>`</p>
-<h1 id="alias-dbusrlocalbindpdk-devbindpy">alias db='/usr/local/bin/dpdk-devbind.py'</h1>
-<h1 id="modprobe-vfio-pci">modprobe vfio-pci</h1>
-<h1 id="modprobe-uio_pci_generic">modprobe uio_pci_generic</h1>
-<h1 id="db-s">db -s</h1>
-<h1 id="network-devices-using-kernel-driver">Network devices using kernel driver</h1>
-<p>0000:01:00.0 'I211 Gigabit Network Connection 1539' if=enp1s0 drv=igb unused=vfio-pci,uio_pci_generic
-0000:02:00.0 'I211 Gigabit Network Connection 1539' if=enp2s0 drv=igb unused=vfio-pci,uio_pci_generic
-0000:03:00.0 'I211 Gigabit Network Connection 1539' if=enp3s0 drv=igb unused=vfio-pci,uio_pci_generic
-0000:04:00.0 'I211 Gigabit Network Connection 1539' if=enp4s0 drv=igb unused=vfio-pci,uio_pci_generic
-（後略）
-`
-注：dpdk-devbindは、頻繁に使用するので、dbとエリアス登録している。</p>
-<p>DPDK対応ドライバuio_pci_genericやvfio-pciも使えそうだ。</p>
-<h3 id="_2">次回予告</h3>
-<p>dpdk-devbindとかDPDK20/21の各種ツールを試してみたい。18とあまり変わらないと思うけど。</p>
+<h3 id="_1">経緯とか</h3>
+<ul>
+<li>Windows上で動くsip-serverをテストするためにメイクしました。</li>
+<li><a href="https://qiita.com/BrianMegane/items/a53338e3c8884b2ed2a3">ここ</a>などでSIPp-3.5のmake方法が紹介されていますが、自分はエラーが多発し、うまく行きませんでした。</li>
+<li>悔しいので、現時点（2020/11/22）の最新版のSIPp-3.6.1のmakeにチャレンジしました。</li>
+<li>なんとすんなりmakeできました。</li>
+<li>SIPp-3.6からcmakeでmakeしているので、makeしやすくなったのではないかと思います。</li>
+<li>Windows 10のCygwin64環境でmakeしています。</li>
+</ul>
 
 
   
