@@ -76,6 +76,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wiki.morifuku.net/linux/ipv6-setting/</loc>
+         <lastmod>2023-09-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wiki.morifuku.net/misc/real/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
