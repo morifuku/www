@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#dpdk" class="md-skip">
           Skip to content
         </a>
       
@@ -762,11 +762,23 @@
   
 
 
-<h1 id="_1">概要</h1>
+<h1 id="dpdk">DPDK設定</h1>
+<p>KubernetesでもDPDKが扱われるようになっているので、そのへんの設定まで、調査していきたいと思います。</p>
+<h1 id="dpdk_1">DPDKプログラミング</h1>
+<p>DPDKをインストールして、dpdk-testpmdが動くようになっても、あまり感動がありません。「L2レベルででたらめなパケットが飛んでるだけ」だからです。ARP、IP、ICMP、UDP等を自力で実装して、上位のレイヤが動き始めると、感動が得られるようになります。以下の順でDPDKプログラムを実装してみます。</p>
 <ul>
-<li>DPDK技術解説</li>
-<li>5GCN技術解説</li>
-<li>OpenShift技術解説</li>
+<li>ARP: 自分のMACアドレスを広報したり、相手のMACアドレスを取得します。VIPも実装できます。</li>
+<li>IPv4: ICMPやUDPやTCPのパケットを乗せる箱です。チェックサムをハードで行わせる（オフロード）おまじないも行います。</li>
+<li>ICMP: ICMP-Echoのみ実装します。外部からのpingに応答するようになります。</li>
+<li>UDP: RTPやGTPのパケットを乗せるための箱です。チェックサムをハードで行わせる（オフロード）おまじないも行います。パケット分割も実装してみます。</li>
+<li>ACL: DPDKのAPIをつかって、ACLしてみます。</li>
+<li>帯域制御: Linuxカーネルにはtcというスグレモノがあるのですが、DPDKでは使えないので、自作します。RFCで定義された帯域制御アルゴリズムを実装するだけです。</li>
+<li>IPv6: 実装してみます。</li>
+</ul>
+<p>作らないもの：Linuxのカーネルでは当たり前のように実装されている、以下の機能も必須と思いますが、ややこしそうなので、ギブアップします。Linuxカーネルに実装した人々を尊敬します。</p>
+<ul>
+<li>TCP</li>
+<li>Bonding</li>
 </ul>
 
 
