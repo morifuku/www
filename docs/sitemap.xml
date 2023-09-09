@@ -6,22 +6,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wiki.morifuku.net/5g/5g/</loc>
-         <lastmod>2023-09-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://wiki.morifuku.net/application/</loc>
          <lastmod>2023-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.morifuku.net/boot/matchbox/</loc>
-         <lastmod>2023-09-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.morifuku.net/develop/A1-subjectA1/</loc>
          <lastmod>2023-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -101,22 +91,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wiki.morifuku.net/tool/A1-subjectA1/</loc>
-         <lastmod>2023-09-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://wiki.morifuku.net/tool/iperf3/</loc>
-         <lastmod>2023-09-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.morifuku.net/virtualbox/esxi/</loc>
-         <lastmod>2023-09-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.morifuku.net/virtualbox/virtualbox/</loc>
          <lastmod>2023-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
