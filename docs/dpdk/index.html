@@ -814,6 +814,15 @@
 
 <h1 id="dpdk">DPDK設定</h1>
 <p>KubernetesでもDPDKが扱われるようになっているので、そのへんの設定まで、調査していきたいと思います。</p>
+<ul>
+<li>ベアメタル上のNICのDPDK対応にして、ベアメタル上でDPDKアプリを動かす。</li>
+<li>VMの仮想NICをDPDK対応にして、VM上でDPDKアプリを動かす。</li>
+<li>OpenShift/Kubernetes仮想NICをDPDK対応にして、コンテナ上でDPDKアプリを動かす。</li>
+<li>SR-IOVサポートのNICで、DPDKアプリを動かす。</li>
+<li>DPDKアプリから物理NICへの、ハードウェアオフロードを制御する。</li>
+<li>チェックサム計算</li>
+<li>Intel FlowDirectorを制御する（ACL等）</li>
+</ul>
 <h1 id="dpdk_1">DPDKプログラミング</h1>
 <p>DPDKをインストールして、dpdk-testpmdが動くようになっても、あまり感動がありません。「L2レベルででたらめなパケットが飛んでるだけ」だからです。ARP、IP、ICMP、UDP等を自力で実装して、上位のレイヤが動き始めると、感動が得られるようになります。以下の順でDPDKプログラムを実装してみます。</p>
 <ul>
