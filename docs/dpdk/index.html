@@ -25,7 +25,7 @@
     
     
       
-        <title>概要 - wiki.morifuku.net</title>
+        <title>DPDK概要 - wiki.morifuku.net</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dpdk" class="md-skip">
+        <a href="#a-12-dpdk" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              概要
+              DPDK概要
             
           </span>
         </div>
@@ -464,9 +464,60 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          DPDK概要
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        概要
+        DPDK概要
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-dpdk" class="md-nav__link">
+    1. DPDK設定
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-dpdk" class="md-nav__link">
+    2. DPDKプログラミング
+  </a>
+  
+    <nav class="md-nav" aria-label="2. DPDKプログラミング">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pmd" class="md-nav__link">
+    PMD
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -796,6 +847,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-dpdk" class="md-nav__link">
+    1. DPDK設定
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-dpdk" class="md-nav__link">
+    2. DPDKプログラミング
+  </a>
+  
+    <nav class="md-nav" aria-label="2. DPDKプログラミング">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pmd" class="md-nav__link">
+    PMD
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -812,7 +898,8 @@
   
 
 
-<h1 id="dpdk">DPDK設定</h1>
+<h1 id="a-12-dpdk">A-12. DPDK概要</h1>
+<h2 id="1-dpdk">1. DPDK設定</h2>
 <p>KubernetesでもDPDKが扱われるようになっているので、そのへんの設定まで、調査していきたいと思います。</p>
 <ul>
 <li>ベアメタル上のNICをDPDK対応にして、ベアメタル上でDPDKアプリを動かす。</li>
@@ -821,7 +908,7 @@
 <li>SR-IOV下のVF NICで、DPDKアプリを動かす。</li>
 <li>DPDKアプリから物理NICへの、ハードウェアオフロードを制御する（チェックサム計算、Intel FlowDirector制御）</li>
 </ul>
-<h1 id="dpdk_1">DPDKプログラミング</h1>
+<h2 id="2-dpdk">2. DPDKプログラミング</h2>
 <p>DPDKをインストールして、dpdk-testpmdが動くようになっても、あまり感動がありません。「L2レベルででたらめなパケットが飛んでるだけ」だからです。ARP、IP、ICMP、UDP等を自力で実装して、上位のレイヤが動き始めると、感動が得られるようになります。以下の順でDPDKプログラムを実装してみます。</p>
 <ul>
 <li>ARP: 自分のMACアドレスを広報したり、相手のMACアドレスを取得します。VIPも実装できます。</li>
