@@ -1101,7 +1101,7 @@
 <p>2023/9/5 編集中</p>
 <h2 id="a">A. はじめに</h2>
 <p><a href="https://gitlab.eurecom.fr/oai/openairinterface5g/-/tree/develop/ci-scripts/yaml_files/5g_rfsimulator">OpenAirInterface5G</a>で開発された、5GのContainer Network Function (CNF)一式をUbuntu22のDocker環境で動かしてみます。そのビルド手順と起動手順を説明します。</p>
-<p><img src="../img/OAI5G-1.jpg" alt="NE view" style="zoom:75%;" /></p>
+<p><img alt="OAI5G-1" src="../../img/OAI5G-1.jpg" /></p>
 <ul>
 <li>CNF間の通信内容（N1、N2、SBI、N3、N4、N6）がWireSharkで観察できます。現状、コンテナ間通信は２つのブリッジ(L2SW)に集約されています（今後、参照点別に分離したい）。見にくい場合は、WireSharkのフィルタ機能を使ってください。</li>
 <li>NR-UEコンテナのシェルから、gNB、UPF、DNを経由して実際のインターネットに接続できます（<code>ping 8.8.8.8</code>などが疎通できます）。</li>
@@ -1109,7 +1109,7 @@
 <li>複数のNR-UEを同時起動できます。</li>
 <li>「Ubuntu18のみで動作する」と本家サイトに記載がありますが、Ubuntu22でも動いたのでこちらで解説します。調子良くない場合は、Ubuntu18をお試し下さい。インテルCPU用のマイクロコードを充てる等、動作環境が限定されている(?)ようです。</li>
 </ul>
-<p><img src="../img/OAI5G-2.jpg" alt="Container-Bridge view" style="zoom:75%;" /></p>
+<p><img alt="OAI5G-2" src="../../img/OAI5G-2.jpg" /></p>
 <h4 id="cnf">CNF一覧</h4>
 <table>
 <thead>
