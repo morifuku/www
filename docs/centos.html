@@ -29,7 +29,7 @@ fdisk -l 2>/dev/null | grep "^Disk" | grep -v mapper | grep -v ram | grep dev
 #
 alias ip-fwd-0="sysctl -w net.ipv4.ip_forward=0"
 alias ip-fwd-1="sysctl -w net.ipv4.ip_forward=1"
-alias df="df -BG -x tmpfs -x squashfs -x overlay"
+alias df="df -hT -x tmpfs -x squashfs -x overlay"
 alias ntp="chronyc tracking"
 alias d="docker"
 alias dex="docker exec -it"
