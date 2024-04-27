@@ -1,10 +1,9 @@
 cd /Volumes/2000GB/Stage/wiki
-git pull origin main
 cp -rf ../Blog/site docs
 git add .
 git commit -m "auto commit"
 git push backup
-git push -u origin
+git push -f -u origin
 exit
 
 
