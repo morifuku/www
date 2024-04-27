@@ -12,20 +12,18 @@
         <meta name="author" content="Shigeru Morifuku">
       
       
-        <link rel="canonical" href="https://wiki.morifuku.net/dpdk/centos7-dpdk22-install/">
+        <link rel="canonical" href="https://wiki.morifuku.net/dpdk/ubuntu22-dpdk22-install/">
       
       
-        <link rel="prev" href="../rhel8-dpdk22-install/">
+        <link rel="prev" href="../centos7-dpdk22-install/">
       
-      
-        <link rel="next" href="../ubuntu22-dpdk22-install/">
       
       <link rel="icon" href="../../assets/images/ladybug5G32.ico">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
     
     
       
-        <title>-2 CentOS7 - wiki.morifuku.net</title>
+        <title>-3 Ubuntu22 - wiki.morifuku.net</title>
       
     
     
@@ -79,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#centos7dpdk22" class="md-skip">
+        <a href="#ubuntu2204-dpdk22" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              -2 CentOS7
+              -3 Ubuntu22
             
           </span>
         </div>
@@ -335,6 +333,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../centos7-dpdk22-install/" class="md-nav__link">
+        -2 CentOS7
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -347,12 +359,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          -2 CentOS7
+          -3 Ubuntu22
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        -2 CentOS7
+        -3 Ubuntu22
       </a>
       
         
@@ -422,20 +434,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ubuntu22-dpdk22-install/" class="md-nav__link">
-        -3 Ubuntu22
-      </a>
     </li>
   
 
@@ -546,35 +544,41 @@
   
 
 
-<p>2023/9/5更新</p>
-<h1 id="centos7dpdk22">CentOS7にDPDK22をインストール</h1>
+<p>2024/4/26更新</p>
+<h1 id="ubuntu2204-dpdk22">Ubuntu22.04 にDPDK22をインストール</h1>
 <h2 id="a">A. はじめに</h2>
-<p>VirtualBoxで作成した、CentOS7.9 VMにDPDK SDKの最新LTS(22.11.2)を入れてみました。そのときのメモです。</p>
+<p>我が家のベアメタルUbuntu22.04機にDPDK対応のNIC（Intel X550他）が入っているので、DPDK SDKの最新LTS(22.11.5)を入れてみました。そのときのメモです。</p>
 <p>注：本記事記載の操作はrootアカウントで行っています。十分ご注意ください。</p>
+<pre><code># cat /etc/issue
+Ubuntu 22.04.4 LTS \n \l
+
+# lspci | grep Ethernet
+00:1f.6 Ethernet controller: Intel Corporation Ethernet Connection (2) I219-V
+01:00.0 Ethernet controller: Intel Corporation Ethernet Controller 10G X550T (rev 01)
+01:00.1 Ethernet controller: Intel Corporation Ethernet Controller 10G X550T (rev 01)
+02:00.0 Ethernet controller: Intel Corporation 82574L Gigabit Network Connection
+</code></pre>
 <h2 id="b">B. 手順</h2>
 <h3 id="b1-python38">B.1 まず、python3.8のインストール</h3>
-<p>DPDK22はpython3.6ではビルドできず、python3.7以降にする必要があります。</p>
-<pre><code># yum install -y centos-release-scl
-# yum install -y rh-python38
-# scl enable rh-python38 bash
-# python3 -V
-Python 3.8.13
-# pip3 -V
-pip 19.3.1 from /opt/rh/rh-python38/root/usr/lib/python3.8/site-packages/pip (python 3.8)
+<p>DPDK22はpython3.6ではビルドできず、python3.7以降にする必要がありますが、すでに3.10となってました。</p>
+<pre><code># python3 -V
+Python 3.10.12
+# pip3 --version
+pip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10)
 </code></pre>
 <h3 id="b2-mesonninja">B.2 つづいてMeson/Ninjaのインストール</h3>
 <pre><code># pip3 install pyelftools
 # pip3 install meson ninja
 # meson --version
-1.2.1
+0.61.2
 # ninja --version
 1.11.1.git.kitware.jobserver-1
 </code></pre>
 <h3 id="b3-dpdk22">B.3 DPDK22のソースをダウンロードしてビルド/インストール</h3>
 <p>LTS（long term support）バージョンを入れないと余計な苦労をするハメになるので、ちゃんと<a href="https://core.dpdk.org/download/">ここ</a>から最新LTSバージョンをダウンロードします。</p>
-<p>なお、2023/9/1時点のLTSは22.11.2となっています</p>
+<p>なお、2024/4/26時点のLTSは22.11.5となっています。</p>
 <pre><code># cd /home
-# wget https://fast.dpdk.org/rel/dpdk-22.11.2.tar.xz
+# wget https://fast.dpdk.org/rel/dpdk-22.11.5.tar.xz
 # tar xJvf dpdk-22.11.2.tar.xz
 </code></pre>
 <p>Meson/Ninjaでビルド/インストールします。</p>
@@ -584,18 +588,21 @@ pip 19.3.1 from /opt/rh/rh-python38/root/usr/lib/python3.8/site-packages/pip (py
 # ninja
 # ninja install
 </code></pre>
-<p>以上でビルドとインストールは完了。恐ろしく簡単でした(時間はかかります)。/usr/local/binや
+<p>以上でビルドとインストールは完了。恐ろしく簡単です(時間はかかります)。/usr/local/binや
 /usr/local/includeにSDKの各種ファイルがちゃんとインストールされています。</p>
-<pre><code># modprobe vfio-pci
-# modprobe uio_pci_generic
-# /usr/local/bin/dpdk-devbind.py -s
+<pre><code>root@pc11:/home/dpdk-stable-22.11.5/build# modprobe vfio-pci
+root@pc11:/home/dpdk-stable-22.11.5/build# modprobe uio_pci_generic
+root@pc11:/home/dpdk-stable-22.11.5/build# dpdk-devbind.py -s
 
 Network devices using kernel driver
 ===================================
-0000:00:03.0 '82540EM Gigabit Ethernet Controller 100e' if=enp0s3 drv=e1000 unused=vfio-pci,uio_pci_generic *Active*
+0000:00:1f.6 'Ethernet Connection (2) I219-V 15b8' if=eno1 drv=e1000e unused=vfio-pci,uio_pci_generic *Active*
+0000:01:00.0 'Ethernet Controller 10G X550T 1563' if=enp1s0f0 drv=ixgbe unused=vfio-pci,uio_pci_generic *Active*
+0000:01:00.1 'Ethernet Controller 10G X550T 1563' if=enp1s0f1 drv=ixgbe unused=vfio-pci,uio_pci_generic
+0000:02:00.0 '82574L Gigabit Network Connection 10d3' if=enp2s0 drv=e1000e unused=vfio-pci,uio_pci_generic
 （後略）
 </code></pre>
-<p>DPDK対応ドライバuio_pci_genericやvfio-pciも使えそうです。</p>
+<p>DPDK対応ドライバのvfio-pciやuio_pci_genericも使えそうです。</p>
 <h2 id="c">C. 今後</h2>
 <p>dpdk-devbindとかDPDK22の各種ツールを試してみたいと思います。</p>
 
