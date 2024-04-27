@@ -15,13 +15,17 @@
         <link rel="canonical" href="https://wiki.morifuku.net/dpdk/rhel8-dpdk22-install/">
       
       
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../centos7-dpdk22-install/">
       
       <link rel="icon" href="../../assets/images/ladybug5G32.ico">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
     
     
       
-        <title>Rhel8 dpdk22 install - wiki.morifuku.net</title>
+        <title>A-1. RHEL8にDPDK22インストール - wiki.morifuku.net</title>
       
     
     
@@ -107,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Rhel8 dpdk22 install
+              A-1. RHEL8にDPDK22インストール
             
           </span>
         </div>
@@ -179,13 +183,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
         A. DPDK編
       </a>
     </li>
@@ -241,14 +247,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
       
       
       
@@ -257,7 +265,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           A. DPDK編
@@ -272,6 +280,126 @@
     <li class="md-nav__item">
       <a href="../" class="md-nav__link">
         概要
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          A-1. RHEL8にDPDK22インストール
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        A-1. RHEL8にDPDK22インストール
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a" class="md-nav__link">
+    A. はじめに
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    B. 手順
+  </a>
+  
+    <nav class="md-nav" aria-label="B. 手順">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#b1-python38" class="md-nav__link">
+    B.1 まず、python3.8のインストール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b2-mesonninja" class="md-nav__link">
+    B.2 つづいてMeson/Ninjaのインストール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b3-dpdk22" class="md-nav__link">
+    B.3 DPDK22のソースをダウンロードしてビルド/インストール
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    C. 今後
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../centos7-dpdk22-install/" class="md-nav__link">
+        A-2. CentOS7にDPDK22インストール
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ubuntu22-dpdk22-install.md" class="md-nav__link">
+        A-3. Ubuntu22にDPDK22インストール
       </a>
     </li>
   
@@ -374,7 +502,7 @@
   
 
 
-  <h1>Rhel8 dpdk22 install</h1>
+  <h1>A-1. RHEL8にDPDK22インストール</h1>
 
 <p>2023/9/5更新</p>
 <h2 id="a">A. はじめに</h2>
