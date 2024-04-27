@@ -1,5 +1,5 @@
 cd /Volumes/2000GB/Stage/wiki
-git pull origin
+git pull origin main
 rm -rf docs
 cp -r ../Blog/mkdocs/site docs
 git add .
