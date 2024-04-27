@@ -310,23 +310,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-dpdk" class="md-nav__link">
-    1. DPDK設定
+  <a href="#a-dpdk" class="md-nav__link">
+    A. DPDK設定
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-dpdk" class="md-nav__link">
-    2. DPDKプログラミング
+  <a href="#b-dpdk-testpmd" class="md-nav__link">
+    B. dpdk-testpmdで、いろいろやってみる。
   </a>
   
-    <nav class="md-nav" aria-label="2. DPDKプログラミング">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-dpdk" class="md-nav__link">
+    C. DPDKプログラミング
+  </a>
+  
+    <nav class="md-nav" aria-label="C. DPDKプログラミング">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#pmd" class="md-nav__link">
     PMD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d" class="md-nav__link">
+    D. 今後の予定
   </a>
   
 </li>
@@ -456,23 +470,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-dpdk" class="md-nav__link">
-    1. DPDK設定
+  <a href="#a-dpdk" class="md-nav__link">
+    A. DPDK設定
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-dpdk" class="md-nav__link">
-    2. DPDKプログラミング
+  <a href="#b-dpdk-testpmd" class="md-nav__link">
+    B. dpdk-testpmdで、いろいろやってみる。
   </a>
   
-    <nav class="md-nav" aria-label="2. DPDKプログラミング">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-dpdk" class="md-nav__link">
+    C. DPDKプログラミング
+  </a>
+  
+    <nav class="md-nav" aria-label="C. DPDKプログラミング">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#pmd" class="md-nav__link">
     PMD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d" class="md-nav__link">
+    D. 今後の予定
   </a>
   
 </li>
@@ -506,23 +534,16 @@
 <li>DPDKの設定</li>
 <li>DPDKプログラミング</li>
 </ul>
-<h2 id="1-dpdk">1. DPDK設定</h2>
+<h2 id="a-dpdk">A. DPDK設定</h2>
 <p>まず、DPDK SDKのインストール方法について説明します。</p>
 <ul>
 <li>RHEL8にDPDK22 SDKをインストール【1】</li>
 <li>CentOS7にDPDK22 SDKをインストール【2】</li>
+<li>Ubuntu22.04にDPDK22 SDKをインストール【3】</li>
 </ul>
-<p>つづいて、DPDK環境の設定方法について説明します。
-ベアメタルに装備されている「物理NICのDPDK設定」から始めて、最近では、
-KubernetesでもDPDKが扱えるようになってきたので、そのへんの設定まで、説明したいと思います。</p>
-<ul>
-<li>ベアメタル上のNICをDPDK対応にして、ベアメタル上でDPDKアプリを動かす。</li>
-<li>VMの仮想NICをDPDK対応にして、VM上でDPDKアプリを動かす。</li>
-<li>OpenShift/Kubernetes仮想NICをDPDK対応にして、コンテナ上でDPDKアプリを動かす。</li>
-<li>SR-IOV下のVF NICで、DPDKアプリを動かす。</li>
-<li>DPDKアプリから物理NICへの、ハードウェアオフロードを制御する（チェックサム計算、Intel FlowDirector制御）</li>
-</ul>
-<h2 id="2-dpdk">2. DPDKプログラミング</h2>
+<p>つづいて、DPDK環境の設定方法について説明します。</p>
+<h2 id="b-dpdk-testpmd">B. dpdk-testpmdで、いろいろやってみる。</h2>
+<h2 id="c-dpdk">C. DPDKプログラミング</h2>
 <p>DPDKをインストールして、dpdk-testpmdが動くようになっても、あまり感動がありません。「L2レベルででたらめなパケットが飛んでるだけ」だからです。ARP、IP、ICMP、UDP等を自力で実装して、上位のレイヤが動き始めると、感動が得られるようになります。以下の順でDPDKプログラムを実装してみます。</p>
 <ul>
 <li>ARP: 自分のMACアドレスを広報したり、相手のMACアドレスを取得します。VIPも実装できます。</li>
@@ -533,13 +554,20 @@ KubernetesでもDPDKが扱えるようになってきたので、そのへんの
 <li>帯域制御: Linuxカーネルにはtcというスグレモノがあるのですが、DPDKからは使えないので、自作します。RFCで定義された帯域制御アルゴリズムを実装します。</li>
 <li>IPv6: 実装してみます。</li>
 </ul>
-<p>作らないもの：Linuxのカーネルでは当たり前のように実装されている、以下の機能も必須と思いますが、ややこしそうなので、ギブアップします。Linuxカーネルに実装した人々を尊敬します。</p>
+<p>作らないもの：Linuxのカーネルでは当たり前のように実装されている、以下の機能も必須と思いますが、ややこしそうなので、ギブアップします。このへんをLinuxカーネルに実装した人々を尊敬しています。</p>
 <ul>
 <li>TCP</li>
 <li>Bonding</li>
 </ul>
-<h3 id="pmd">PMD</h3>
+<h4 id="pmd">PMD</h4>
 <p>割込が発生するシステムコールを完全排除した、DPDKプログラムです。共有メモリを介して他プログラムやNICと通信します。また、CPUのクロックレジスタを直接読み出して、タイミング処理を行います。このように、PMDは非常にエキサイティングなプログラムです。sleepしない（sleepしてしまうと誰も起こしてくれない）ので、CPU使用率は常に100%となってます。</p>
+<h3 id="d">D. 今後の予定</h3>
+<p>KubernetesでもDPDKが扱えるようになってきました。コンテナを特権モードで動かせば、なんでもできしまうのですが、KubernetesにしっかりとmanageされたVF/DPDKリソースを扱ってみたいと思います・</p>
+<ul>
+<li>VMの仮想NICをDPDK対応にして、VM上でDPDKアプリを動かす。</li>
+<li>SR-IOV下のVF NICで、DPDKアプリを動かす。</li>
+<li>OpenShift/Kubernetes仮想NICをDPDK対応にして、コンテナ上でDPDKアプリを動かす。</li>
+</ul>
 
 
   
