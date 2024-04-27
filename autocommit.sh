@@ -1,7 +1,7 @@
 cd /Volumes/2000GB/Stage/wiki
 git pull origin main
 rm -rf docs
-cp -r ../Blog/mkdocs/site docs
+cp -r ../Blog/site docs
 git add .
 git commit -m "auto commit"
 git push backup
