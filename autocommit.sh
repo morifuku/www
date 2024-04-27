@@ -1,5 +1,5 @@
 cd /Volumes/2000GB/Stage/wiki
-cp -rf docs
+rm -rf docs
 cp -rp ../Blog/site docs
 git add .
 git commit -m "auto commit"
