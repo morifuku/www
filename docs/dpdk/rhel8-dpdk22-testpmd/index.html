@@ -12,10 +12,8 @@
         <meta name="author" content="Shigeru Morifuku">
       
       
-        <link rel="canonical" href="https://wiki.morifuku.net/dpdk/ubuntu22-dpdk22-testpmd/">
+        <link rel="canonical" href="https://wiki.morifuku.net/dpdk/rhel8-dpdk22-testpmd/">
       
-      
-        <link rel="prev" href="../ubuntu22-dpdk22-install/">
       
       
       <link rel="icon" href="../../assets/images/ladybug5G32.ico">
@@ -23,7 +21,7 @@
     
     
       
-        <title>-3 Ubuntu22 - wiki.morifuku.net</title>
+        <title>Rhel8 dpdk22 testpmd - wiki.morifuku.net</title>
       
     
     
@@ -77,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ubuntu2204dpdk22testpmdudp" class="md-skip">
+        <a href="#rhel8dpdk22testpmdudp" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              -3 Ubuntu22
+              Rhel8 dpdk22 testpmd
             
           </span>
         </div>
@@ -181,15 +179,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link md-tabs__link--active">
+      <a href="../" class="md-tabs__link">
         A DPDK編
       </a>
     </li>
@@ -245,16 +241,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
       
       
       
@@ -263,7 +257,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           A DPDK編
@@ -366,18 +360,16 @@
               
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
       
       
       
@@ -386,7 +378,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_3">
           <span class="md-nav__icon md-icon"></span>
           A2 dpdk-testpmdを使う
@@ -397,100 +389,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          -3 Ubuntu22
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../ubuntu22-dpdk22-testpmd/" class="md-nav__link">
         -3 Ubuntu22
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1. はじめに
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2. 手順
-  </a>
-  
-    <nav class="md-nav" aria-label="2. 手順">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-hugepagevfio" class="md-nav__link">
-    2.1 HugePageとVFIOの設定
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22" class="md-nav__link">
-    2.2 ドライバの付け替え
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23" class="md-nav__link">
-    2.3 送信先情報の調査
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#24-testpmd" class="md-nav__link">
-    2.4 testpmd起動
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3. 今後
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -609,48 +512,47 @@
 
 
 <p>2024/4/28更新</p>
-<h1 id="ubuntu2204dpdk22testpmdudp">Ubuntu22.04/DPDK22のtestpmdでUDPパケットを送信する</h1>
+<h1 id="rhel8dpdk22testpmdudp">RHEL8/DPDK22のtestpmdでUDPパケットを送信する</h1>
 <h2 id="1">1. はじめに</h2>
 <p>testpmdによる、UDP送信の手順を紹介します。</p>
 <h2 id="2">2. 手順</h2>
 <h3 id="21-hugepagevfio">2.1 HugePageとVFIOの設定</h3>
 <ul>
 <li>とりあえず、2MバイトのHugePageを、2048面用意します。</li>
-<li>VFIOをUNSAFE-NOIOMMUモードに設定します。</li>
 </ul>
 <pre><code># echo 2048 &gt; /proc/sys/vm/nr_hugepages
-# echo 1 &gt; /sys/module/vfio/parameters/enable_unsafe_noiommu_mode
 </code></pre>
 <h3 id="22">2.2 ドライバの付け替え</h3>
 <ul>
 <li>lspciでNICのデバイスアドレスを確認します。</li>
 <li>見つけたNICを、<code>nmcli c down</code>でKernel管理から切り離します。</li>
-<li>vfio-pciドライバを充てます。</li>
+<li>uio_pci_genericドライバを充てます。</li>
 <li>dpdk-devbind.pyで確認します。</li>
 </ul>
 <pre><code># lspci | grep Ethernet
 00:1f.6 Ethernet controller: Intel Corporation Ethernet Connection (2) I219-V
-01:00.0 Ethernet controller: Intel Corporation Ethernet Controller 10G X550T (rev 01)
-01:00.1 Ethernet controller: Intel Corporation Ethernet Controller 10G X550T (rev 01) ←これを使います
-02:00.0 Ethernet controller: Intel Corporation 82574L Gigabit Network Connection
+01:00.0 Ethernet controller: Intel Corporation Ethernet Controller X550 (rev 01)
+01:00.1 Ethernet controller: Intel Corporation Ethernet Controller X550 (rev 01) ←これを使用
 # nmcli c down enp1s0f1
-# dpdk-devbind.py -b vfio-pci 01:00.1
+# modprobe uio_pci_generic
+# dpdk-devbind.py -b uio_pci_generic 01:00.1
 # dpdk-devbind.py -s
 
 Network devices using DPDK-compatible driver
 ============================================
-0000:01:00.1 'Ethernet Controller 10G X550T 1563' drv=vfio-pci unused=ixgbe,uio_pci_generic
+0000:01:00.1 'Ethernet Controller X550 1563' drv=uio_pci_generic unused=ixgbe,vfio-pci ←これを使用
 （後略）
 </code></pre>
 <h3 id="23">2.3 送信先情報の調査</h3>
 <ul>
 <li>UDPパケットを送信するには、相手のMACアドレス、IPアドレスが必要です。</li>
 <li>注：送信先とL2ネットワークで繋がっている前提です。</li>
-<li>今回のテスト環境では、相手先は、MACアドレス:192.168.2.123、IPアドレス:a0:36:9f:b3:1c:5dとなっています。</li>
+<li>今回のテスト環境では、相手先は、IPアドレス:192.168.2.111、MACアドレス:a0:36:9f:b3:1a:f5となっています。</li>
 </ul>
 <pre><code>enp1s0f1: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
-        inet 192.168.2.123  netmask 255.255.255.0  broadcast 192.168.2.255
-        ether a0:36:9f:b3:1c:5d  txqueuelen 1000  (Ethernet)
+        inet 192.168.2.111  netmask 255.255.255.0  broadcast 192.168.2.255
+        inet6 fe80::b4c2:e158:3a22:7f19  prefixlen 64  scopeid 0x20&lt;link&gt;
+        ether a0:36:9f:b3:1a:f5  txqueuelen 1000  (Ethernet)
 （後略）
 </code></pre>
 <h3 id="24-testpmd">2.4 testpmd起動</h3>
@@ -661,9 +563,9 @@ Network devices using DPDK-compatible driver
 <li>--tx-ip: 送信元と送信先のIPアドレスを指定します。</li>
 <li>--tx-udp: 送信元と送信先のUDPポート番号を指定します。</li>
 <li>--eth-peer: 送信先のMACアドレスを指定します。</li>
-<li>--stats-preriod: 送信状況を表示する間隔を指定します。</li>
+<li>--stats-period: 送信状況を表示する間隔を指定します。</li>
 </ul>
-<pre><code># dpdk-testpmd -a 0000:01:00.1 -- --forward-mode=txonly --tx-ip=192.168.2.111,192.168.2.123 --tx-udp=5000,5000 --eth-peer=0,a0:36:9f:b3:1c:5d --stats-preriod 1
+<pre><code># dpdk-testpmd -a 0000:01:00.1 -- --forward-mode=txonly --tx-ip=192.168.2.111,192.168.2.123 --tx-udp=5000,5000 --eth-peer=0,a0:36:9f:b3:1c:5d --stats-period=1
 </code></pre>
 <ul>
 <li>起動すると、送信が開始され、以下が1秒周期で表示されます</li>
@@ -671,26 +573,26 @@ Network devices using DPDK-compatible driver
 </ul>
 <pre><code>Port statistics ====================================
   ######################## NIC statistics for port 0  ########################
-  RX-packets: 77         RX-missed: 0          RX-bytes:  25588
+  RX-packets: 26         RX-missed: 0          RX-bytes:  9804
   RX-errors: 0
   RX-nombuf:  0
-  TX-packets: 49730880   TX-errors: 0          TX-bytes:  3182775776
+  TX-packets: 8595304    TX-errors: 0          TX-bytes:  550098844
 
   Throughput (since last show)
-  Rx-pps:            0          Rx-bps:            0
-  Tx-pps:      1420507          Tx-bps:    727300160
+  Rx-pps:           13          Rx-bps:        51880
+  Tx-pps:      1420506          Tx-bps:    727298816
   ############################################################################
 </code></pre>
 <p>CTRL-Cで終了すると、最終的な統計情報が表示されます。PMDによる「全力送信」なので、ドロップが多くなっています。</p>
-<pre><code>
+<pre><code>Waiting for lcores to finish...
   ---------------------- Forward statistics for port 0  ----------------------
-  RX-packets: 77             RX-dropped: 0             RX-total: 77
-  TX-packets: 51152078       TX-dropped: 3250595457    TX-total: 3301747535
+  RX-packets: 30             RX-dropped: 0             RX-total: 30
+  TX-packets: 10016425       TX-dropped: 556749345     TX-total: 566765770
   ----------------------------------------------------------------------------
 
   +++++++++++++++ Accumulated forward statistics for all ports+++++++++++++++
-  RX-packets: 77             RX-dropped: 0             RX-total: 77
-  TX-packets: 51152078       TX-dropped: 3250595457    TX-total: 3301747535
+  RX-packets: 30             RX-dropped: 0             RX-total: 30
+  TX-packets: 10016425       TX-dropped: 556749345     TX-total: 566765770
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Done.
@@ -698,15 +600,22 @@ Done.
 Stopping port 0...
 Stopping ports...
 Done
+
+Shutting down port 0...
+Closing ports...
+Port 0 is closed
+Done
+
+Bye...
 </code></pre>
 <ul>
 <li>相手先でtcpdumpを録ってみます。かなり小さいUDPパケットが送られています。</li>
 <li>testpmdのパラメータを変更することで、いろいろなUDPパケットを送信することができます。</li>
 </ul>
-<pre><code>14:44:45.081049 IP 192.168.2.111.commplex-main &gt; 192.168.2.123.commplex-main: UDP, length 22
-14:44:45.081050 IP 192.168.2.111.commplex-main &gt; 192.168.2.123.commplex-main: UDP, length 22
-14:44:45.081050 IP 192.168.2.111.commplex-main &gt; 192.168.2.123.commplex-main: UDP, length 22
-14:44:45.081051 IP 192.168.2.111.commplex-main &gt; 192.168.2.123.commplex-main: UDP, length 22
+<pre><code>16:15:18.561939 IP 192.168.2.123.5000 &gt; 192.168.2.111.5000: UDP, length 22
+16:15:18.561939 IP 192.168.2.123.5000 &gt; 192.168.2.111.5000: UDP, length 22
+16:15:18.561939 IP 192.168.2.123.5000 &gt; 192.168.2.111.5000: UDP, length 22
+16:15:18.561939 IP 192.168.2.123.5000 &gt; 192.168.2.111.5000: UDP, length 22
 </code></pre>
 <h2 id="3">3. 今後</h2>
 <p>testpmdによる、UDP受信を紹介する予定です。</p>
