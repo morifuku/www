@@ -683,7 +683,7 @@ Network devices using DPDK-compatible driver
 </code></pre>
 <ul>
 <li>起動すると、送信が開始され、以下が1秒周期で表示されます</li>
-<li>「10G NIC」と「2.5GのL2SW」を使用しているのですが、NICデバイスの初期化をちゃんとしてないので、700Mbosしか出てないようです。</li>
+<li>「10G NIC」と「2.5GのL2SW」を使用しているのですが、700Mbpsしか出てないようです。UDPのペイロードのデータが非常に小さいからだと思います。あとで、チューニングしてみようと思います。</li>
 </ul>
 <pre><code>Port statistics ====================================
   ######################## NIC statistics for port 0  ########################
