@@ -196,6 +196,22 @@
   
 
       
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../openshift/index.md" class="md-tabs__link">
+        B OpenShift編
+      </a>
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -310,25 +326,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#a-dpdk" class="md-nav__link">
-    A. DPDK設定
+  <a href="#a1-dpdk22" class="md-nav__link">
+    A1 DPDK22インストール
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#b-dpdk-testpmd" class="md-nav__link">
-    B. dpdk-testpmdで、いろいろやってみる。
+  <a href="#a2-dpdk-testpmdudp" class="md-nav__link">
+    A2 dpdk-testpmdで、UDP送信
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#c-dpdk" class="md-nav__link">
-    C. DPDKプログラミング
+  <a href="#a3-dpdk-testpmdudp" class="md-nav__link">
+    A3 dpdk-testpmdで、UDP受信
   </a>
   
-    <nav class="md-nav" aria-label="C. DPDKプログラミング">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a4-dpdk" class="md-nav__link">
+    A4 DPDKプログラミング
+  </a>
+  
+    <nav class="md-nav" aria-label="A4 DPDKプログラミング">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -455,14 +478,14 @@
       
       
         <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
-          A2 dpdk-testpmdを使う
+          A2 dpdk-testpmdでUDP送信
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_3">
           <span class="md-nav__icon md-icon"></span>
-          A2 dpdk-testpmdを使う
+          A2 dpdk-testpmdでUDP送信
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -507,6 +530,55 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          B OpenShift編
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          B OpenShift編
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openshift/index.md" class="md-nav__link">
+        概要
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -534,25 +606,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#a-dpdk" class="md-nav__link">
-    A. DPDK設定
+  <a href="#a1-dpdk22" class="md-nav__link">
+    A1 DPDK22インストール
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#b-dpdk-testpmd" class="md-nav__link">
-    B. dpdk-testpmdで、いろいろやってみる。
+  <a href="#a2-dpdk-testpmdudp" class="md-nav__link">
+    A2 dpdk-testpmdで、UDP送信
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#c-dpdk" class="md-nav__link">
-    C. DPDKプログラミング
+  <a href="#a3-dpdk-testpmdudp" class="md-nav__link">
+    A3 dpdk-testpmdで、UDP受信
   </a>
   
-    <nav class="md-nav" aria-label="C. DPDKプログラミング">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a4-dpdk" class="md-nav__link">
+    A4 DPDKプログラミング
+  </a>
+  
+    <nav class="md-nav" aria-label="A4 DPDKプログラミング">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -595,19 +674,32 @@
 <h1 id="dpdk">DPDK概要</h1>
 <p>DPDK技術に関して、以下を説明します。</p>
 <ul>
-<li>DPDKの設定</li>
+<li>DPDK22インストール</li>
+<li>dpdk-testpmdで、UDP送信</li>
+<li>dpdk-testpmdで、UDP受信</li>
 <li>DPDKプログラミング</li>
 </ul>
-<h2 id="a-dpdk">A. DPDK設定</h2>
-<p>まず、DPDK SDKのインストール方法について説明します。</p>
+<h2 id="a1-dpdk22">A1 DPDK22インストール</h2>
+<p>まず、DPDK22 SDKのインストール方法について説明します。</p>
 <ul>
-<li>RHEL8にDPDK22 SDKをインストール【1】</li>
-<li>CentOS7にDPDK22 SDKをインストール【2】</li>
-<li>Ubuntu22.04にDPDK22 SDKをインストール【3】</li>
+<li>RHEL8にDPDK22 SDKをインストール</li>
+<li>CentOS7にDPDK22 SDKをインストール</li>
+<li>Ubuntu22.04にDPDK22 SDKをインストール</li>
 </ul>
 <p>つづいて、DPDK環境の設定方法について説明します。</p>
-<h2 id="b-dpdk-testpmd">B. dpdk-testpmdで、いろいろやってみる。</h2>
-<h2 id="c-dpdk">C. DPDKプログラミング</h2>
+<h2 id="a2-dpdk-testpmdudp">A2 dpdk-testpmdで、UDP送信</h2>
+<ul>
+<li>RHEL8でUDP送信</li>
+<li>CentOS7でDP送信
+*　Ubuntu22でUDP送信</li>
+</ul>
+<h2 id="a3-dpdk-testpmdudp">A3 dpdk-testpmdで、UDP受信</h2>
+<ul>
+<li>RHEL8でUDP受信</li>
+<li>CentOS7でDP受信
+*　Ubuntu22でUDP受信</li>
+</ul>
+<h2 id="a4-dpdk">A4 DPDKプログラミング</h2>
 <p>DPDKをインストールして、dpdk-testpmdが動くようになっても、あまり感動がありません。「L2レベルででたらめなパケットが飛んでるだけ」だからです。ARP、IP、ICMP、UDP等を自力で実装して、上位のレイヤが動き始めると、感動が得られるようになります。以下の順でDPDKプログラムを実装してみます。</p>
 <ul>
 <li>ARP: 自分のMACアドレスを広報したり、相手のMACアドレスを取得します。VIPも実装できます。</li>
