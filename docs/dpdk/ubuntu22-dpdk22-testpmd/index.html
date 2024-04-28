@@ -625,7 +625,11 @@
 <p>2024/4/28更新</p>
 <h1 id="ubuntu2204dpdk22testpmdudp">Ubuntu22.04/DPDK22のtestpmdでUDPパケットを送信する</h1>
 <h2 id="1">1. はじめに</h2>
-<p>以下の構成でUDP送信をtestpmdで行う手順を紹介します。</p>
+<ul>
+<li>以下の構成でUDP送信をtestpmdで行う手順を解説します。</li>
+<li>本章では、左側のUbuntu22から送信する手順について解説します。</li>
+<li>ARP手順等を省略した、かなりシンプルなUPD通信となっていますが、物理的に離れた構成での通信ができています。</li>
+</ul>
 <p><img alt="DPDK-NW-01" src="../../img/DPDK-NW-01.jpg" /></p>
 <h2 id="2">2. 手順</h2>
 <h3 id="21-hugepagevfio">2.1 HugePageとVFIOの設定</h3>
