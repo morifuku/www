@@ -101,6 +101,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wiki.morifuku.net/openshift/</loc>
+         <lastmod>2024-04-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wiki.morifuku.net/sipp/sipp-install/</loc>
          <lastmod>2024-04-28</lastmod>
          <changefreq>daily</changefreq>
