@@ -608,7 +608,7 @@
   
 
 
-<p>2024/4/26更新</p>
+<p>2024/4/28更新</p>
 <h1 id="ubuntu2204dpdk22testpmdudp">Ubuntu22.04/DPDK22のtestpmdでUDPパケットを送信する</h1>
 <h2 id="a">A. はじめに</h2>
 <p>testpmdによる、UDP送信の手順を紹介します。</p>
@@ -663,8 +663,8 @@ Network devices using DPDK-compatible driver
 <pre><code>dpdk-testpmd -a 0000:01:00.0 -- --forward-mode=txonly --tx-ip=192.168.2.111,192.168.2.123 --tx-udp=5000,5000 --eth-peer=0,a0:36:9f:b3:1c:5d --stats-preriod 1
 </code></pre>
 <ul>
-<li>起動すると、送信が開始され、いかのが表示されます</li>
-<li>10G NICなのですが、初期化をちゃんとしてないので、遅くなっています。</li>
+<li>起動すると、送信が開始され、いかが表示されます</li>
+<li>「10G NIC」と「2.5GのL2SW」を使用しているのですが、NICデバイスの初期化をちゃんとしてないので、700Mbosしか出てないようです。</li>
 </ul>
 <pre><code>Port statistics ====================================
   ######################## NIC statistics for port 0  ########################
@@ -697,7 +697,7 @@ Stopping ports...
 Done
 </code></pre>
 <ul>
-<li>相手先でtcpdumpを録ってみます。かなり小さい(というか空の)UDPパケットが送られています。</li>
+<li>相手先でtcpdumpを録ってみます。かなり小さいUDPパケットが送られています。</li>
 <li>testpmdのパラメータを変更することで、いろいろなUDPパケットを送信することができます。</li>
 </ul>
 <pre><code>14:44:45.081049 IP 192.168.2.111.commplex-main &gt; 192.168.2.123.commplex-main: UDP, length 22
