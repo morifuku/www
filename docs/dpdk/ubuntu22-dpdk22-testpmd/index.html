@@ -648,6 +648,7 @@
 01:00.1 Ethernet controller: Intel Corporation Ethernet Controller 10G X550T (rev 01) ←これを使います
 02:00.0 Ethernet controller: Intel Corporation 82574L Gigabit Network Connection
 # nmcli c down enp1s0f1
+# modprobe vfio-pci
 # dpdk-devbind.py -b vfio-pci 01:00.1
 # dpdk-devbind.py -s
 
@@ -660,7 +661,7 @@ Network devices using DPDK-compatible driver
 <ul>
 <li>UDPパケットを送信するには、相手のMACアドレス、IPアドレスが必要です。</li>
 <li>注：送信先とL2ネットワークで繋がっている前提です。</li>
-<li>今回のテスト環境では、相手先は、MACアドレス:192.168.2.123、IPアドレス:a0:36:9f:b3:1c:5dとなっています。</li>
+<li>今回のテスト環境では、相手先は、IPアドレス:192.168.2.123、MACアドレス:a0:36:9f:b3:1c:5dとなっています。</li>
 </ul>
 <pre><code>enp1s0f1: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
         inet 192.168.2.123  netmask 255.255.255.0  broadcast 192.168.2.255
