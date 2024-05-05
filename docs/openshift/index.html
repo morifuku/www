@@ -717,6 +717,8 @@
 <li>vmwareも考えましたが、Bastion環境を直接母艦に構築したいので、VirtualBoxにしました。</li>
 <li>Ubuntu標準のVirtualBoxは古く、PXEがうまく動作しなかったので、最新版に入れ替えました。</li>
 <li>VirtualBoxとPXEにより、OpenShiftの再インストールやworkerノードの増設が非常に高速になっています。</li>
+<li>dnsmasqは、dnsサーバ、tftpサーバ、dhcpサーバとして使用しています。</li>
+<li>matchboxがhttpサーバ機能を持っているため、nginx等のhttpサーバは入れていません。</li>
 </ul>
 <h2 id="b1-openshift-415">B1 OpenShift 4.15 インストール</h2>
 <p>Ubuntu 22.04のベアメタルに、VirtualBoxでCoreOSのVMを立て、その上にOpenShift 4.15を構築します。
