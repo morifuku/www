@@ -631,7 +631,7 @@
   
     <li class="md-nav__item">
       <a href="../openshift-matchbox-install.md" class="md-nav__link">
-        -3 basiton環境
+        -3 dnsmasq
       </a>
     </li>
   
@@ -645,7 +645,21 @@
   
     <li class="md-nav__item">
       <a href="../openshift-matchbox-install.md" class="md-nav__link">
-        -4 OpenShift
+        -4 ha-proxy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openshift-matchbox-install.md" class="md-nav__link">
+        -5 OpenShift
       </a>
     </li>
   
@@ -767,7 +781,7 @@
 <p><img alt="OPENSHIFT-01" src="../img/openshift-02.jpg" /></p>
 <ul>
 <li>ベースのコードはSBIの他にNASやNGAP等もきっちり実装しているのですが、OpenShift上でどう動いているのか観察してみたいと思います。</li>
-<li>SR-IOV/DPDK環境として、OpenShiftはI350やX550サポートしてないので、代替策を考えたいと思います。</li>
+<li>SR-IOV/DPDK環境として、OpenShiftはI350やX550をサポートしてないので、代替策を考えたいと思います。</li>
 </ul>
 <h2 id="b1-openshift-415">B1 OpenShift 4.15 インストール</h2>
 <p>Ubuntu 22.04のベアメタルに、VirtualBoxでCoreOSのVMを立て、その上にOpenShift 4.15を構築します。
@@ -775,6 +789,11 @@ VMはPXEによる、ネットワークインストールとします。</p>
 <ul>
 <li>UbuntuベアメタルにVirtualBox環境構築</li>
 <li>Ubuntuベアメタルにmatchbox環境構築</li>
+<li>
+<ul>
+<li>Ubuntuベアメタルにdnsmasq環境構築</li>
+</ul>
+</li>
 <li>Ubuntuベアメタルにha-proxy環境構築</li>
 <li>VirtualBox VMにOpenShiftインストール</li>
 </ul>
