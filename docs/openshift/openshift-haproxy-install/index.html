@@ -12,20 +12,18 @@
         <meta name="author" content="Shigeru Morifuku">
       
       
-        <link rel="canonical" href="https://wiki.morifuku.net/dpdk/ubuntu22-dpdk22-testpmd/">
+        <link rel="canonical" href="https://wiki.morifuku.net/openshift/openshift-haproxy-install/">
       
       
-        <link rel="prev" href="../rhel8-dpdk22-testpmd/">
+        <link rel="prev" href="../openshift-matchbox-install/">
       
-      
-        <link rel="next" href="../../openshift/">
       
       <link rel="icon" href="../../assets/images/ladybug5G32.ico">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
     
     
       
-        <title>-3 Ubuntu22 - wiki.morifuku.net</title>
+        <title>-4 ha-proxy - wiki.morifuku.net</title>
       
     
     
@@ -79,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ubuntu2204dpdk22testpmdudp" class="md-skip">
+        <a href="#b1-2-ha-proxy" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              -3 Ubuntu22
+              -4 ha-proxy
             
           </span>
         </div>
@@ -183,15 +181,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../dpdk/" class="md-tabs__link">
         A DPDK編
       </a>
     </li>
@@ -201,13 +197,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../openshift/" class="md-tabs__link">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
         B OpenShift編
       </a>
     </li>
@@ -263,16 +261,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
       
       
       
@@ -281,7 +277,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           A DPDK編
@@ -294,7 +290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../dpdk/" class="md-nav__link">
         概要
       </a>
     </li>
@@ -337,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rhel8-dpdk22-install/" class="md-nav__link">
+      <a href="../../dpdk/rhel8-dpdk22-install/" class="md-nav__link">
         -1 RHEL8
       </a>
     </li>
@@ -351,7 +347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../centos7-dpdk22-install/" class="md-nav__link">
+      <a href="../../dpdk/centos7-dpdk22-install/" class="md-nav__link">
         -2 CentOS7
       </a>
     </li>
@@ -365,7 +361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ubuntu22-dpdk22-install/" class="md-nav__link">
+      <a href="../../dpdk/ubuntu22-dpdk22-install/" class="md-nav__link">
         -3 Ubuntu22
       </a>
     </li>
@@ -375,6 +371,121 @@
           
         </ul>
       </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+          A2 dpdk-testpmdでUDP送信
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          A2 dpdk-testpmdでUDP送信
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dpdk/rhel8-dpdk22-testpmd/" class="md-nav__link">
+        -1 RHEL8
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dpdk/ubuntu22-dpdk22-testpmd/" class="md-nav__link">
+        -3 Ubuntu22
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          B OpenShift編
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          B OpenShift編
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        概要
+      </a>
     </li>
   
 
@@ -395,19 +506,19 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
-          A2 dpdk-testpmdでUDP送信
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          B1 OpenShift 4.15 インストールと設定
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_1_3">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
-          A2 dpdk-testpmdでUDP送信
+          B1 OpenShift 4.15 インストールと設定
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -417,8 +528,50 @@
   
   
     <li class="md-nav__item">
-      <a href="../rhel8-dpdk22-testpmd/" class="md-nav__link">
-        -1 RHEL8
+      <a href="../install-overview/" class="md-nav__link">
+        概要
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openshift-virtualbox-install.md" class="md-nav__link">
+        -1 VirtualBox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openshift-matchbox-install/" class="md-nav__link">
+        -2 matchbox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openshift-dnsmasq-install.md" class="md-nav__link">
+        -3 dnsmasq
       </a>
     </li>
   
@@ -441,12 +594,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          -3 Ubuntu22
+          -4 ha-proxy
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        -3 Ubuntu22
+        -4 ha-proxy
       </a>
       
         
@@ -465,56 +618,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1. はじめに
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2. 手順
-  </a>
-  
-    <nav class="md-nav" aria-label="2. 手順">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-hugepagevfio" class="md-nav__link">
-    2.1 HugePageとVFIOの設定
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22" class="md-nav__link">
-    2.2 ドライバの付け替え
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23" class="md-nav__link">
-    2.3 送信先情報の調査
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#24-testpmd" class="md-nav__link">
-    2.4 testpmd起動
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3. 今後
+  <a href="#etchaproxyhaproxycfg" class="md-nav__link">
+    /etc/haproxy/haproxy.cfg
   </a>
   
 </li>
@@ -528,168 +633,13 @@
 
             
           
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-          B OpenShift編
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          B OpenShift編
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
             
               
   
   
   
     <li class="md-nav__item">
-      <a href="../../openshift/" class="md-nav__link">
-        概要
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-          B1 OpenShift 4.15 インストールと設定
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_2_2">
-          <span class="md-nav__icon md-icon"></span>
-          B1 OpenShift 4.15 インストールと設定
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../openshift/install-overview/" class="md-nav__link">
-        概要
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../openshift/openshift-virtualbox-install.md" class="md-nav__link">
-        -1 VirtualBox
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../openshift/openshift-matchbox-install/" class="md-nav__link">
-        -2 matchbox
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../openshift/openshift-dnsmasq-install.md" class="md-nav__link">
-        -3 dnsmasq
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../openshift/openshift-haproxy-install/" class="md-nav__link">
-        -4 ha-proxy
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../openshift/openshift-openshift-install.md" class="md-nav__link">
+      <a href="../openshift-openshift-install.md" class="md-nav__link">
         -5 OpenShift
       </a>
     </li>
@@ -737,56 +687,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1. はじめに
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2. 手順
-  </a>
-  
-    <nav class="md-nav" aria-label="2. 手順">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-hugepagevfio" class="md-nav__link">
-    2.1 HugePageとVFIOの設定
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22" class="md-nav__link">
-    2.2 ドライバの付け替え
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23" class="md-nav__link">
-    2.3 送信先情報の調査
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#24-testpmd" class="md-nav__link">
-    2.4 testpmd起動
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3. 今後
+  <a href="#etchaproxyhaproxycfg" class="md-nav__link">
+    /etc/haproxy/haproxy.cfg
   </a>
   
 </li>
@@ -809,114 +711,73 @@
   
 
 
-<p>2024/4/28更新</p>
-<h1 id="ubuntu2204dpdk22testpmdudp">Ubuntu22.04/DPDK22のtestpmdでUDPパケットを送信する</h1>
-<h2 id="1">1. はじめに</h2>
+<h1 id="b1-2-ha-proxy">B1-2 ha-proxy インストールと設定</h1>
+<h3 id="etchaproxyhaproxycfg">/etc/haproxy/haproxy.cfg</h3>
 <ul>
-<li>以下の構成でUDP送信をtestpmdで行う手順を解説します。</li>
-<li>本章では、左側のUbuntu22から送信する手順について解説します。</li>
-<li>ARP手順等を省略した、かなりシンプルなUPD通信となっていますが、物理的に離れた構成での通信ができています。</li>
+<li>OpenShiftが提供するAPIのURLにアクセスがあったとき、ラウンドロビンでbootstrap/master/workerに分配する</li>
+<li>/etc/haproxy/haproxy.cfgファイルの末尾に以下を追記する。</li>
+<li><code>api-6443</code>と<code>config-22623</code>のパートに、bootstrapの記載がある。</li>
+<li>OpenShiftインストールでbootstrap VM起動中は、これらの行は必須</li>
+<li>OpenShiftインストールが完了し、bootstrap VMを停止＆削除したあとは、これらの行を削除する</li>
+<li><code>http-80</code>と<code>https-443</code>のパートに、workerの記載がある</li>
+<li>worker VMを追加、削除するときは、適宜該当行を追加、削除する</li>
 </ul>
-<p><img alt="DPDK-NW-01" src="../../img/DPDK-NW-02.jpg" /></p>
-<h2 id="2">2. 手順</h2>
-<h3 id="21-hugepagevfio">2.1 HugePageとVFIOの設定</h3>
-<ul>
-<li>とりあえず、2MバイトのHugePageを、2048面用意します。</li>
-<li>VFIOをUNSAFE-NOIOMMUモードに設定します。</li>
-</ul>
-<pre><code># echo 2048 &gt; /proc/sys/vm/nr_hugepages
-# echo 1 &gt; /sys/module/vfio/parameters/enable_unsafe_noiommu_mode
-</code></pre>
-<h3 id="22">2.2 ドライバの付け替え</h3>
-<ul>
-<li>lspciでNICのデバイスアドレスを確認します。</li>
-<li>見つけたNICを、<code>nmcli c down</code>でKernel管理から切り離します。</li>
-<li>vfio-pciドライバを充てます。</li>
-<li>dpdk-devbind.pyで確認します。</li>
-</ul>
-<pre><code># lspci | grep Ethernet
-00:1f.6 Ethernet controller: Intel Corporation Ethernet Connection (2) I219-V
-01:00.0 Ethernet controller: Intel Corporation Ethernet Controller 10G X550T (rev 01)
-01:00.1 Ethernet controller: Intel Corporation Ethernet Controller 10G X550T (rev 01) ←これを使います
-02:00.0 Ethernet controller: Intel Corporation 82574L Gigabit Network Connection
-# nmcli c down enp1s0f1
-# modprobe vfio-pci
-# dpdk-devbind.py -b vfio-pci 01:00.1
-# dpdk-devbind.py -s
+<pre><code>frontend K8s-api
+    bind *:6443
+    option tcplog
+    mode tcp
+    default_backend     api-6443
 
-Network devices using DPDK-compatible driver
-============================================
-0000:01:00.1 'Ethernet Controller 10G X550T 1563' drv=vfio-pci unused=ixgbe,uio_pci_generic
-（後略）
-</code></pre>
-<h3 id="23">2.3 送信先情報の調査</h3>
-<ul>
-<li>UDPパケットを送信するには、相手のMACアドレス、IPアドレスが必要です。</li>
-<li>注：送信先とL2ネットワークで繋がっている前提です。</li>
-<li>今回のテスト環境では、相手先は、IPアドレス:192.168.2.123、MACアドレス:a0:36:9f:b3:1c:5dとなっています。</li>
-</ul>
-<pre><code>enp1s0f1: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
-        inet 192.168.2.123  netmask 255.255.255.0  broadcast 192.168.2.255
-        ether a0:36:9f:b3:1c:5d  txqueuelen 1000  (Ethernet)
-（後略）
-</code></pre>
-<h3 id="24-testpmd">2.4 testpmd起動</h3>
-<p>testpmdを起動してみます。パラメータの概要は以下となります。</p>
-<ul>
-<li>-a: 使用するNICデバイスのBDFアドレスを指定します。</li>
-<li>--forward-mode=txonly: 送信モードで起動します。</li>
-<li>--tx-ip: 送信元と送信先のIPアドレスを指定します。</li>
-<li>--tx-udp: 送信元と送信先のUDPポート番号を指定します。</li>
-<li>--eth-peer: 送信先のMACアドレスを指定します。</li>
-<li>--stats-period: 送信状況を表示する間隔を指定します。</li>
-</ul>
-<pre><code># dpdk-testpmd -a 0000:01:00.1 -- --forward-mode=txonly --tx-ip=192.168.2.111,192.168.2.123 --tx-udp=5000,5000 --eth-peer=0,a0:36:9f:b3:1c:5d --stats-period 1
-</code></pre>
-<ul>
-<li>起動すると、送信が開始され、以下が1秒周期で表示されます</li>
-<li>「10G NIC」と「2.5GのL2SW」を使用しているのですが、700Mbpsしか出てないようです。UDPのペイロードのデータが非常に小さいからだと思います。あとで、チューニングしてみようと思います。</li>
-</ul>
-<pre><code>Port statistics ====================================
-  ######################## NIC statistics for port 0  ########################
-  RX-packets: 77         RX-missed: 0          RX-bytes:  25588
-  RX-errors: 0
-  RX-nombuf:  0
-  TX-packets: 49730880   TX-errors: 0          TX-bytes:  3182775776
+frontend Machine-config
+    bind *:22623
+    option tcplog
+    mode tcp
+    default_backend     config-22623
 
-  Throughput (since last show)
-  Rx-pps:            0          Rx-bps:            0
-  Tx-pps:      1420507          Tx-bps:    727300160
-  ############################################################################
-</code></pre>
-<p>CTRL-Cで終了すると、最終的な統計情報が表示されます。PMDによる「全力送信」なので、ドロップが多くなっています。</p>
-<pre><code>
-  ---------------------- Forward statistics for port 0  ----------------------
-  RX-packets: 77             RX-dropped: 0             RX-total: 77
-  TX-packets: 51152078       TX-dropped: 3250595457    TX-total: 3301747535
-  ----------------------------------------------------------------------------
+frontend Ingress-http
+    bind *:80
+    option tcplog
+    mode tcp
+    default_backend http-80
 
-  +++++++++++++++ Accumulated forward statistics for all ports+++++++++++++++
-  RX-packets: 77             RX-dropped: 0             RX-total: 77
-  TX-packets: 51152078       TX-dropped: 3250595457    TX-total: 3301747535
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+frontend Ingress-https
+    bind *:443
+    option tcplog
+    mode tcp
+    default_backend     https-443
 
-Done.
+backend api-6443
+    mode tcp
+    balance     roundrobin
+    option  ssl-hello-chk
+    server  bootstrap bootstrap.morifuku.com:6443 check
+    server  master-0 master-0.morifuku.com:6443 check
+    server  master-1 master-1.morifuku.com:6443 check
+    server  master-2 master-2.morifuku.com:6443 check
 
-Stopping port 0...
-Stopping ports...
-Done
+backend config-22623
+    mode tcp
+    balance     roundrobin
+    server  bootstrap bootstrap.morifuku.com:22623 check
+    server  master-0 master-0.morifuku.com:22623 check
+    server  master-1 master-1.morifuku.com:22623 check
+    server  master-2 master-2.morifuku.com:22623 check
+
+backend http-80
+    mode tcp
+    balance     roundrobin
+    server  worker-0 worker-0.morifuku.com:80 check
+    server  worker-1 worker-1.morifuku.com:80 check
+    server  worker-2 worker-2.morifuku.com:80 check
+
+backend https-443
+    mode tcp
+    balance     roundrobin
+    option      ssl-hello-chk
+    server  worker-0 worker-0.morifuku.com:443 check
+    server  worker-1 worker-1.morifuku.com:443 check
+    server  worker-2 worker-2.morifuku.com:443 check
 </code></pre>
-<ul>
-<li>相手先でtcpdumpを録ってみます。かなり小さいUDPパケットが送られています。</li>
-<li>testpmdのパラメータを変更することで、いろいろなUDPパケットを送信することができます。</li>
-</ul>
-<pre><code>14:44:45.081049 IP 192.168.2.111.commplex-main &gt; 192.168.2.123.commplex-main: UDP, length 22
-14:44:45.081050 IP 192.168.2.111.commplex-main &gt; 192.168.2.123.commplex-main: UDP, length 22
-14:44:45.081050 IP 192.168.2.111.commplex-main &gt; 192.168.2.123.commplex-main: UDP, length 22
-14:44:45.081051 IP 192.168.2.111.commplex-main &gt; 192.168.2.123.commplex-main: UDP, length 22
-</code></pre>
-<h2 id="3">3. 今後</h2>
-<p>testpmdによる、UDP受信を紹介する予定です。</p>
 
 
   

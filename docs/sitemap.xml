@@ -111,6 +111,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wiki.morifuku.net/openshift/openshift-haproxy-install/</loc>
+         <lastmod>2024-05-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wiki.morifuku.net/openshift/openshift-matchbox-install/</loc>
          <lastmod>2024-05-06</lastmod>
          <changefreq>daily</changefreq>
