@@ -780,17 +780,17 @@
 <p>下図のCNFをOpenShiftにデプロイします。</p>
 <p><img alt="OPENSHIFT-01" src="../img/openshift-02.jpg" /></p>
 <ul>
-<li>ベースのコードはSBIの他にNASやNGAP等もきっちり実装しているのですが、OpenShift上でどう動いているのか観察してみたいと思います。</li>
-<li>SR-IOV/DPDK環境として、OpenShiftはI350やX550をサポートしてないので、代替策を考えたいと思います。</li>
+<li>ベースのコードはSBIの他にNAS/NGAPやPFCP等もきっちり実装しているのですが、OpenShift上でどう動いているのか観察してみたいと思います。</li>
+<li>OpenShiftのSR-IOV/DPDK対応を試したいのですが、手持ち廉価NICのI350やX550はサポートしてないようので、代替策を考えたいと思います。</li>
 </ul>
 <h2 id="b1-openshift-415">B1 OpenShift 4.15 インストール</h2>
 <p>Ubuntu 22.04のベアメタルに、VirtualBoxでCoreOSのVMを立て、その上にOpenShift 4.15を構築します。
 VMはPXEによる、ネットワークインストールとします。</p>
 <ul>
-<li>UbuntuベアメタルにVirtualBox環境構築</li>
-<li>Ubuntuベアメタルにmatchbox環境構築</li>
-<li>Ubuntuベアメタルにdnsmasq環境構築</li>
-<li>Ubuntuベアメタルにha-proxy環境構築</li>
+<li>VirtualBox環境構築</li>
+<li>matchbox環境構築</li>
+<li>dnsmasq環境構築</li>
+<li>ha-proxy環境構築</li>
 <li>VirtualBox VMにOpenShiftインストール</li>
 </ul>
 <h2 id="b2-persistent-volume">B2 Persistent Volume設定</h2>
