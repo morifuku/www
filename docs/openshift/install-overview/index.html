@@ -562,36 +562,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#virtual-box" class="md-nav__link">
-    Virtual Box
+  <a href="#b1-1-virtual-box" class="md-nav__link">
+    B1-1 Virtual Box
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#matchbox" class="md-nav__link">
-    matchbox
+  <a href="#b1-2-matchbox" class="md-nav__link">
+    B1-2 matchbox
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dnsmasq" class="md-nav__link">
-    dnsmasq
+  <a href="#b1-3-dnsmasq" class="md-nav__link">
+    B1-3 dnsmasq
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ha-proxy" class="md-nav__link">
-    ha-proxy
+  <a href="#b1-4-ha-proxy" class="md-nav__link">
+    B1-4 ha-proxy
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#openshift" class="md-nav__link">
-    OpenShift
+  <a href="#b1-5-openshift" class="md-nav__link">
+    B1-5 OpenShift
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b1-6" class="md-nav__link">
+    B1-6 その他
   </a>
   
 </li>
@@ -715,36 +722,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#virtual-box" class="md-nav__link">
-    Virtual Box
+  <a href="#b1-1-virtual-box" class="md-nav__link">
+    B1-1 Virtual Box
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#matchbox" class="md-nav__link">
-    matchbox
+  <a href="#b1-2-matchbox" class="md-nav__link">
+    B1-2 matchbox
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dnsmasq" class="md-nav__link">
-    dnsmasq
+  <a href="#b1-3-dnsmasq" class="md-nav__link">
+    B1-3 dnsmasq
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ha-proxy" class="md-nav__link">
-    ha-proxy
+  <a href="#b1-4-ha-proxy" class="md-nav__link">
+    B1-4 ha-proxy
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#openshift" class="md-nav__link">
-    OpenShift
+  <a href="#b1-5-openshift" class="md-nav__link">
+    B1-5 OpenShift
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b1-6" class="md-nav__link">
+    B1-6 その他
   </a>
   
 </li>
@@ -767,7 +781,7 @@
   
 
 
-<h1 id="b1-openshift-415">B1 OpenShift 4.15 インストールと設定 【工事中】</h1>
+<h1 id="b1-openshift-415">B1 OpenShift 4.15 インストールと設定の概要 【工事中】</h1>
 <p>Ubuntu 22.04のベアメタルに、VirtualBoxでCoreOSのVMを立て、その上にOpenShift 4.15を構築します。 VMはPXEによる、ネットワークインストールとします。</p>
 <ul>
 <li>VirtualBox環境構築</li>
@@ -777,11 +791,32 @@
 <li>VirtualBox VMにOpenShiftインストール</li>
 </ul>
 <p><img alt="OPENSHIFT-01" src="../../img/openshift-03.jpg" /></p>
-<h3 id="virtual-box">Virtual Box</h3>
-<h3 id="matchbox">matchbox</h3>
-<h3 id="dnsmasq">dnsmasq</h3>
-<h3 id="ha-proxy">ha-proxy</h3>
-<h3 id="openshift">OpenShift</h3>
+<h3 id="b1-1-virtual-box">B1-1 Virtual Box</h3>
+<ul>
+<li>VirtualBoxの操作はGUIとなるので、Desktop版のUbuntu 22.04にインストールします。CLIで全機能操作可能ですが、頭の中でGUI操作をイメージしながらの操作になると思います。CLIを駆使することで、スクリプトによる自動化が可能です。</li>
+<li>aptコマンドで用意されいるVirtualBoxを試しましたが、バージョンが古く、PXEがうまく動作しませんでした。最新版(2024/5/6時点でversion 7.0.16)のVirtualBoxと拡張機能(Extention Pack 7.0.16)をインストールしておきます。</li>
+</ul>
+<h3 id="b1-2-matchbox">B1-2 matchbox</h3>
+<ul>
+<li>0.11を使用します。GitHubから、本家サイトで提供されているバイナリ版はUbuntuでは動作しないので、ソースをダウンロードしてコンパイルします。</li>
+</ul>
+<h3 id="b1-3-dnsmasq">B1-3 dnsmasq</h3>
+<ul>
+<li>aptコマンドで標準版をインストールします。</li>
+<li>じぶん自身(母艦)からの名前解決がうまく動作しなかったので、外においた。【要対策】</li>
+</ul>
+<h3 id="b1-4-ha-proxy">B1-4 ha-proxy</h3>
+<ul>
+<li>aptコマンドで標準版をインストールします。</li>
+</ul>
+<h3 id="b1-5-openshift">B1-5 OpenShift</h3>
+<ul>
+<li>RedHatのアカウントが必要です。</li>
+</ul>
+<h3 id="b1-6">B1-6 その他</h3>
+<ul>
+<li>IPv6は無効化したつもり、だけど、有効なのかどうか不明。</li>
+</ul>
 
 
   
