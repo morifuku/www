@@ -782,7 +782,7 @@
 
 
 <h1 id="b1-openshift-415">B1 OpenShift 4.15 インストールと設定の概要 【工事中】</h1>
-<p>Ubuntu 22.04のベアメタルに、VirtualBoxでCoreOSのVMを立て、その上にOpenShift 4.15を構築します。 VMはPXEによる、ネットワークインストールとします。</p>
+<p>Ubuntu 22.04のベアメタルサーバに、VirtualBoxでCoreOSのVMを立て、その上にOpenShift 4.15を構築します。 VMはPXEによる、ネットワークインストールとします。</p>
 <ul>
 <li>VirtualBox環境構築</li>
 <li>matchbox環境構築</li>
@@ -790,11 +790,13 @@
 <li>ha-proxy環境構築</li>
 <li>VirtualBox VMにOpenShiftインストール</li>
 </ul>
+<p>1台のベアメタルサーバで十分なVMリソースが確保できないとき、2台、3台と増設しますが、2台め以降にはbastion環境は不要です。</p>
 <p><img alt="OPENSHIFT-01" src="../../img/openshift-03.jpg" /></p>
 <h3 id="b1-1-virtual-box">B1-1 Virtual Box</h3>
 <ul>
 <li>VirtualBoxの操作はGUIとなるので、Desktop版のUbuntu 22.04にインストールします。CLIで全機能操作可能ですが、頭の中でGUI操作をイメージしながらの操作になると思います。CLIを駆使することで、スクリプトによる自動化が可能です。</li>
 <li>aptコマンドで用意されいるVirtualBoxを試しましたが、バージョンが古く、PXEがうまく動作しませんでした。最新版(2024/5/6時点でversion 7.0.16)のVirtualBoxと拡張機能(Extention Pack 7.0.16)をインストールしておきます。</li>
+<li>各VMには、matchboxからPXEインストールするので、インストールメディアの設定は不要ですが、CPU数、メインメモリ量、ネットワークカード、CHIP設定等が必要です（スクリプトによる設定も可能です）。</li>
 </ul>
 <h3 id="b1-2-matchbox">B1-2 matchbox</h3>
 <ul>
@@ -808,6 +810,7 @@
 <h3 id="b1-4-ha-proxy">B1-4 ha-proxy</h3>
 <ul>
 <li>aptコマンドで標準版をインストールします。</li>
+<li>インストール中と、運用開始事項とで、コンフィギュレーションが変わるので、注意が必要です。スクリプトによる自動化の余地はあります。</li>
 </ul>
 <h3 id="b1-5-openshift">B1-5 OpenShift</h3>
 <ul>
@@ -816,6 +819,8 @@
 <h3 id="b1-6">B1-6 その他</h3>
 <ul>
 <li>IPv6は無効化したつもり、だけど、有効なのかどうか不明。</li>
+<li>NAT機能が必要。</li>
+<li>http proxyを置くと、どのPodと外部接続のトラヒックが監視できる。</li>
 </ul>
 
 
