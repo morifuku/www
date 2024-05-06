@@ -592,22 +592,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    全体構成
+  <a href="#1-matchbox" class="md-nav__link">
+    1. Matchboxについて
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#groups" class="md-nav__link">
-    groups
+  <a href="#2" class="md-nav__link">
+    2. インストール
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#profiles" class="md-nav__link">
-    profiles
+  <a href="#3" class="md-nav__link">
+    3. 設定
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31-groups" class="md-nav__link">
+    3.1 groups
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-profiles" class="md-nav__link">
+    3.2 profiles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 起動
   </a>
   
 </li>
@@ -795,22 +816,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    全体構成
+  <a href="#1-matchbox" class="md-nav__link">
+    1. Matchboxについて
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#groups" class="md-nav__link">
-    groups
+  <a href="#2" class="md-nav__link">
+    2. インストール
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#profiles" class="md-nav__link">
-    profiles
+  <a href="#3" class="md-nav__link">
+    3. 設定
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31-groups" class="md-nav__link">
+    3.1 groups
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-profiles" class="md-nav__link">
+    3.2 profiles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 起動
   </a>
   
 </li>
@@ -833,8 +875,10 @@
   
 
 
-<h1 id="b1-2-matchbox">B1-2 Matchbox インストール</h1>
-<h3 id="_1">全体構成</h3>
+<h1 id="b1-2-matchbox">B1-2 Matchbox インストールと設定</h1>
+<h3 id="1-matchbox">1. Matchboxについて</h3>
+<h3 id="2">2. インストール</h3>
+<h3 id="3">3. 設定</h3>
 <pre><code># pwd
 /var/lib/matchbox
 # tree .
@@ -860,7 +904,7 @@
     ├── master.json
     └── worker.json
 </code></pre>
-<h3 id="groups">groups</h3>
+<h3 id="31-groups">3.1 groups</h3>
 <ul>
 <li>PXE処理を要求するクライアントのMACアドレスで、適用するprofileを決定する</li>
 <li>1MACアドレスで、1ファイル用意する</li>
@@ -895,7 +939,7 @@
   }
 }
 </code></pre>
-<h3 id="profiles">profiles</h3>
+<h3 id="32-profiles">3.2 profiles</h3>
 <ul>
 <li>プロファイル別にPXEの処理内容が記述されている。</li>
 <li>tftpとhttpを使って、assetに配置されたファイルをクライアントに配信する。</li>
@@ -967,6 +1011,7 @@
   }
 }
 </code></pre>
+<h3 id="4">4. 起動</h3>
 
 
   
