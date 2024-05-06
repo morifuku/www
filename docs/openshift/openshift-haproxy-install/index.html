@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#b1-4-ha-proxy" class="md-skip">
+        <a href="#b1-4-haproxy" class="md-skip">
           Skip to content
         </a>
       
@@ -620,6 +620,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#haproxy" class="md-nav__link">
+    HAProxyについて
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#etchaproxyhaproxycfg" class="md-nav__link">
     /etc/haproxy/haproxy.cfg
   </a>
@@ -781,6 +788,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#haproxy" class="md-nav__link">
+    HAProxyについて
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#etchaproxyhaproxycfg" class="md-nav__link">
     /etc/haproxy/haproxy.cfg
   </a>
@@ -805,7 +819,17 @@
   
 
 
-<h1 id="b1-4-ha-proxy">B1-4 ha-proxy インストールと設定</h1>
+<h1 id="b1-4-haproxy">B1-4 HAProxy インストールと設定</h1>
+<h4 id="haproxy">HAProxyについて</h4>
+<blockquote>
+<p>HAProxyは、TCPおよびHTTPベースのアプリケーション向けのオープンソースのプロキシ、リバースプロキシ、および負荷分散ソリューションです1。以下に詳細を説明します。
+* リバースプロキシ: HAProxyはリバースプロキシとして機能し、クライアントからのリクエストをバックエンドサーバーに転送します。これにより、負荷分散やセキュリティ機能を実現できます。
+* 負荷分散: HAProxyは複数のバックエンドサーバーにトラフィックを均等に分散することができます。高トラフィックのWebサイトやアプリケーションで特に有用です。
+* 高可用性: HAProxyは冗長性を提供し、サーバーの障害時に別のサーバーにトラフィックを切り替えることができます。
+* HTTPおよびTCPプロトコルのサポート: HAProxyはHTTPおよびTCPトラフィックの両方を処理できます。</p>
+<p>HAProxyは、高速で信頼性のあるロードバランサーとして、世界で最も訪れられているWebサイトの一部を支えています。</p>
+</blockquote>
+<p>【出典：COPILOT】</p>
 <h3 id="etchaproxyhaproxycfg">/etc/haproxy/haproxy.cfg</h3>
 <ul>
 <li>OpenShiftが提供するAPIのURLにアクセスがあったとき、ラウンドロビンでbootstrap/master/workerに分配する</li>
