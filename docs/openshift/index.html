@@ -578,14 +578,14 @@
       
       
         <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-          B1 OpenShiftインストール
+          B1 OpenShift 4.15 インストールと設定
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
-          B1 OpenShiftインストール
+          B1 OpenShift 4.15 インストールと設定
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -596,7 +596,21 @@
   
     <li class="md-nav__item">
       <a href="../openshift-bastion-install.md" class="md-nav__link">
-        -1 Bastion
+        -1 VirtualBox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openshift-bastion-install.md" class="md-nav__link">
+        -2 matchbox
       </a>
     </li>
   
@@ -610,7 +624,21 @@
   
     <li class="md-nav__item">
       <a href="../openshift-matchbox-install.md" class="md-nav__link">
-        -2 MatchBox
+        -3 basiton環境
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openshift-matchbox-install.md" class="md-nav__link">
+        -4 OpenShift
       </a>
     </li>
   
@@ -709,12 +737,12 @@
   
 
 
-<h1 id="openshift">OpenShift 概要</h1>
+<h1 id="openshift">OpenShift 概要【工事中】</h1>
 <h4 id="ubuntu2204openshift5g">目標：Ubuntu22.04ベアメタルのOpenShift環境で5G一式を動かす</h4>
 <p>現時点(2024/5/6)で最新の4.15.24のOpenShiftを構築し、その上に OpenAirInterface 5Gをソースコードからビルドし、動かします。OpenAirInterface 5Gは、NR-UEシミュレータ、5GRAN、5GCN、UPF、DNシミュレータで構成されていて、ひととおりの5Gの役者が揃っています。</p>
 <p><img alt="OPENSHIFT-01" src="../img/openshift-01.jpg" /></p>
 <ul>
-<li>vmwareも考えましたが、Bastion環境を直接母艦に構築したいので、VirtualBoxにしました。</li>
+<li>vmwareも考えましたが、Bastion環境を直接母艦上に構築したいので、VirtualBox/Ubuntuにしました。</li>
 <li>Ubuntu標準のVirtualBoxはバージョンが古く、PXEがうまく動作しなかったので、最新版に入れ替えました。</li>
 <li>VirtualBoxとPXEにより、OpenShiftの再インストールやworkerノードの増設を手軽に行えます。</li>
 <li>dnsmasqは、dnsサーバ、tftpサーバ、dhcpサーバとして使用しています。</li>
@@ -724,6 +752,7 @@
 <p><img alt="OPENSHIFT-01" src="../img/openshift-02.jpg" /></p>
 <ul>
 <li>ベースはNASやNGAP等も実装ているのですが、OpenShift上でどう動いているのか調べてみたいと思います。</li>
+<li>SR-IOV/DPDK環境として、OpenShiftは高価なNICしかサポートしてないので、代替策を考えたいと思います。</li>
 </ul>
 <h2 id="b1-openshift-415">B1 OpenShift 4.15 インストール</h2>
 <p>Ubuntu 22.04のベアメタルに、VirtualBoxでCoreOSのVMを立て、その上にOpenShift 4.15を構築します。
