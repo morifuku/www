@@ -15,13 +15,15 @@
         <link rel="canonical" href="https://wiki.morifuku.net/openshift/openshift-matchbox-install/">
       
       
+        <link rel="prev" href="../install-overview/">
+      
       
       <link rel="icon" href="../../assets/images/ladybug5G32.ico">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
     
     
       
-        <title>B1-1 Matchbox インストール - wiki.morifuku.net</title>
+        <title>-2 matchbox - wiki.morifuku.net</title>
       
     
     
@@ -107,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              B1-1 Matchbox インストール
+              -2 matchbox
             
           </span>
         </div>
@@ -195,13 +197,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
         B OpenShift編
       </a>
     </li>
@@ -448,14 +452,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
       
       
       
@@ -464,7 +470,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           B OpenShift編
@@ -489,16 +495,18 @@
               
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
       
       
       
@@ -507,7 +515,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
           B1 OpenShift 4.15 インストールと設定
@@ -534,7 +542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openshift-virtualbox-install.md" class="md-nav__link">
+      <a href="../openshift-virtualbox-install.md" class="md-nav__link">
         -1 VirtualBox
       </a>
     </li>
@@ -546,11 +554,66 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../openshift-matchbox-install.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          -2 matchbox
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         -2 matchbox
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    全体構成
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#groups" class="md-nav__link">
+    groups
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profiles" class="md-nav__link">
+    profiles
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -562,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openshift-dnsmasq-install.md" class="md-nav__link">
+      <a href="../openshift-dnsmasq-install.md" class="md-nav__link">
         -3 dnsmasq
       </a>
     </li>
@@ -576,7 +639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openshift-haproxy-install.md" class="md-nav__link">
+      <a href="../openshift-haproxy-install.md" class="md-nav__link">
         -4 ha-proxy
       </a>
     </li>
@@ -590,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openshift-openshift-install.md" class="md-nav__link">
+      <a href="../openshift-openshift-install.md" class="md-nav__link">
         -5 OpenShift
       </a>
     </li>
@@ -768,9 +831,7 @@
   }
 }
 </code></pre>
-<pre><code># pwd
-/var/lib/matchbox/profiles
-# cat master.json
+<pre><code># cat master.json
 {
   &quot;id&quot;: &quot;master&quot;,
   &quot;name&quot;: &quot;OCP4 Master&quot;,
@@ -791,9 +852,7 @@
   }
 }
 </code></pre>
-<pre><code># pwd
-/var/lib/matchbox/profiles
-# cat worker.json
+<pre><code># cat worker.json
 {
   &quot;id&quot;: &quot;worker&quot;,
   &quot;name&quot;: &quot;OCP4 Worker&quot;,
