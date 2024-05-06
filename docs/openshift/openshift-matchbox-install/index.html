@@ -12,7 +12,7 @@
         <meta name="author" content="Shigeru Morifuku">
       
       
-        <link rel="canonical" href="https://wiki.morifuku.net/sipp/sipp-install/">
+        <link rel="canonical" href="https://wiki.morifuku.net/openshift/openshift-matchbox-install/">
       
       
       
@@ -21,7 +21,7 @@
     
     
       
-        <title>Sipp install - wiki.morifuku.net</title>
+        <title>B1-1 Matchbox インストール - wiki.morifuku.net</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#oai5gnr-ue2uacuas" class="md-skip">
+        <a href="#b1-1-matchbox" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sipp install
+              B1-1 Matchbox インストール
             
           </span>
         </div>
@@ -201,7 +201,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../openshift/" class="md-tabs__link">
+      <a href="../" class="md-tabs__link">
         B OpenShift編
       </a>
     </li>
@@ -477,7 +477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openshift/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         概要
       </a>
     </li>
@@ -520,7 +520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openshift/install-overview/" class="md-nav__link">
+      <a href="../install-overview/" class="md-nav__link">
         概要
       </a>
     </li>
@@ -628,6 +628,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -636,8 +638,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#oai5gnr-ue2uacuas" class="md-nav__link">
-    OAI5GでNR-UEを2台起動し、UACとUASを走らせたい
+  <a href="#_1" class="md-nav__link">
+    全体構成
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#groups" class="md-nav__link">
+    groups
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profiles" class="md-nav__link">
+    profiles
   </a>
   
 </li>
@@ -660,45 +676,143 @@
   
 
 
-  <h1>Sipp install</h1>
-
-<p>2023/9/9更新</p>
-<h3 id="oai5gnr-ue2uacuas">OAI5GでNR-UEを2台起動し、UACとUASを走らせたい</h3>
+<h1 id="b1-1-matchbox">B1-1 Matchbox インストール</h1>
+<h3 id="_1">全体構成</h3>
+<pre><code># pwd
+/var/lib/matchbox
+# tree .
+.
+├── assets
+│   ├── bootstrap.ign
+│   ├── master.ign
+│   ├── rhcos-4.15.0-x86_64-live-initramfs.x86_64.img
+│   ├── rhcos-4.15.0-x86_64-live-kernel-x86_64
+│   ├── rhcos-4.15.0-x86_64-live-rootfs.x86_64.img
+│   └── worker.ign
+├── groups
+│   ├── bootstrap.json
+│   ├── master-0.json
+│   ├── master-1.json
+│   ├── master-2.json
+│   ├── worker-0.json
+│   ├── worker-1.json
+│   └── worker-2.json
+├── ignition
+└── profiles
+    ├── bootstrap.json
+    ├── master.json
+    └── worker.json
+</code></pre>
+<h3 id="groups">groups</h3>
 <ul>
-<li>
-<p>RTPも飛ばせるが、モバイルのcodecではない。モバイルのcodecのpcapをあとで探してみる【TODO】。</p>
-</li>
-<li>
-<p>IMSのシナリオファイルは以前作ったことがあるので、適用してみる【TODO】。</p>
-</li>
+<li>送られてきたMACアドレスから、適用するprofileを決定する</li>
+<li>全VM分を用意する必要がある</li>
 </ul>
-<pre><code># cd /home
-# wget https://github.com/SIPp/sipp/archive/refs/tags/v3.7.1.tar.gz
-# tar xzvf v3.7.1.tar.gz
-# cd sipp-3.7.1/
-# apt install cmake g++
-# apt install libncurses5 libncurses5-dev
-# vi include/version.h
+<pre><code># pwd
+/var/lib/matchbox/groups
+# cat bootstrap.json
+{
+  &quot;id&quot;: &quot;bootstrap&quot;,
+  &quot;name&quot;: &quot;OCP4 Bootstrap&quot;,
+  &quot;profile&quot;: &quot;bootstrap&quot;,
+  &quot;selector&quot;: {
+  &quot;mac&quot;: &quot;00:00:00:00:00:22&quot;
+  }
+}
+# cat master-0.json
+{
+  &quot;id&quot;: &quot;master-0&quot;,
+  &quot;name&quot;: &quot;OCP4 Master 0&quot;,
+  &quot;profile&quot;: &quot;master&quot;,
+  &quot;selector&quot;: {
+    &quot;mac&quot;: &quot;00:00:00:00:00:23&quot;
+  }
+}
+# cat worker-0.json
+{
+  &quot;id&quot;: &quot;worker-0&quot;,
+  &quot;name&quot;: &quot;OCP4 Worker 0&quot;,
+  &quot;profile&quot;: &quot;worker&quot;,
+  &quot;selector&quot;: {
+    &quot;mac&quot;: &quot;00:00:00:00:00:26&quot;
+  }
+}
 </code></pre>
-<p><code>include/version.h</code>の1行目と2行目を以下のように修正する</p>
-<pre><code>#define SIPP_VERSION &quot;v3.7.1&quot;
-#if 0 /* set to 0 to bypass the &quot;#error&quot; below */
+<h3 id="profiles">profiles</h3>
+<ul>
+<li>プロファイル別にPXEの処理を決定する。</li>
+<li>tftpとhttpを使って、assetに配置されたファイルをクライアントに配信する。</li>
+<li>http://bastion.morifuku.com:8080は、matchboxが提供するhttpサービス。</li>
+<li>http URL形式になってないファイルはtftpが適用される（と思われる）。</li>
+</ul>
+<pre><code># pwd
+/var/lib/matchbox/profiles
+# cat bootstrap.json
+{
+  &quot;id&quot;: &quot;bootstrap&quot;,
+  &quot;name&quot;: &quot;OCP4 Bootstrap&quot;,
+  &quot;ignition_id&quot;: &quot;bootstrap.ign&quot;,
+  &quot;boot&quot;: {
+    &quot;kernel&quot;: &quot;/assets/rhcos-4.15.0-x86_64-live-kernel-x86_64&quot;,
+    &quot;initrd&quot;: [
+      &quot;/assets/rhcos-4.15.0-x86_64-live-initramfs.x86_64.img&quot;
+    ],
+    &quot;args&quot;: [
+      &quot;ip=dhcp&quot;,
+      &quot;rd.neednet=1&quot;,
+      &quot;coreos.inst=yes&quot;,
+      &quot;coreos.inst.install_dev=/dev/sda&quot;,
+      &quot;coreos.live.rootfs_url=http://bastion.morifuku.com:8080/assets/rhcos-4.15.0-x86_64-live-rootfs.x86_64.img&quot;,
+      &quot;coreos.inst.ignition_url=http://bastion.morifuku.com:8080/assets/bootstrap.ign&quot;
+    ]
+  }
+}
 </code></pre>
-<p>makeする</p>
-<pre><code># cmake .
-# make
-# make install
-Consolidate compiler generated dependencies of target sipp
-[100%] Built target sipp
-Install the project...
--- Install configuration: &quot;&quot;
--- Installing: /usr/local/bin/sipp
--- Set runtime path of &quot;/usr/local/bin/sipp&quot; to &quot;&quot;
-# which sipp
-/usr/local/bin/sipp
-# sipp -v
- SIPp v3.7.1.
-（以下省略）
+<pre><code># pwd
+/var/lib/matchbox/profiles
+# cat master.json
+{
+  &quot;id&quot;: &quot;master&quot;,
+  &quot;name&quot;: &quot;OCP4 Master&quot;,
+  &quot;ignition_id&quot;: &quot;master.ign&quot;,
+  &quot;boot&quot;: {
+    &quot;kernel&quot;: &quot;/assets/rhcos-4.15.0-x86_64-live-kernel-x86_64&quot;,
+    &quot;initrd&quot;: [
+      &quot;/assets/rhcos-4.15.0-x86_64-live-initramfs.x86_64.img&quot;
+    ],
+    &quot;args&quot;: [
+      &quot;ip=dhcp&quot;,
+      &quot;rd.neednet=1&quot;,
+      &quot;coreos.inst=yes&quot;,
+      &quot;coreos.inst.install_dev=/dev/sda&quot;,
+      &quot;coreos.live.rootfs_url=http://bastion.morifuku.com:8080/assets/rhcos-4.15.0-x86_64-live-rootfs.x86_64.img&quot;,
+      &quot;coreos.inst.ignition_url=http://bastion.morifuku.com:8080/assets/master.ign&quot;
+    ]
+  }
+}
+</code></pre>
+<pre><code># pwd
+/var/lib/matchbox/profiles
+# cat worker.json
+{
+  &quot;id&quot;: &quot;worker&quot;,
+  &quot;name&quot;: &quot;OCP4 Worker&quot;,
+  &quot;ignition_id&quot;: &quot;worker.ign&quot;,
+  &quot;boot&quot;: {
+    &quot;kernel&quot;: &quot;/assets/rhcos-4.15.0-x86_64-live-kernel-x86_64&quot;,
+    &quot;initrd&quot;: [
+      &quot;/assets/rhcos-4.15.0-x86_64-live-initramfs.x86_64.img&quot;
+    ],
+    &quot;args&quot;: [
+      &quot;ip=dhcp&quot;,
+      &quot;rd.neednet=1&quot;,
+      &quot;coreos.inst=yes&quot;,
+      &quot;coreos.inst.install_dev=/dev/sda&quot;,
+      &quot;coreos.live.rootfs_url=http://bastion.morifuku.com:8080/assets/rhcos-4.15.0-x86_64-live-rootfs.x86_64.img&quot;,
+      &quot;coreos.inst.ignition_url=http://bastion.morifuku.com:8080/assets/worker.ign&quot;
+    ]
+  }
+}
 </code></pre>
 
 
