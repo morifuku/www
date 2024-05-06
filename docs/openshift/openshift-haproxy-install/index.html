@@ -25,7 +25,7 @@
     
     
       
-        <title>-4 ha-proxy - wiki.morifuku.net</title>
+        <title>-4 HAProxy - wiki.morifuku.net</title>
       
     
     
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              -4 ha-proxy
+              -4 HAProxy
             
           </span>
         </div>
@@ -596,12 +596,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          -4 ha-proxy
+          -4 HAProxy
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        -4 ha-proxy
+        -4 HAProxy
       </a>
       
         
@@ -620,15 +620,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#haproxy" class="md-nav__link">
-    HAProxyについて
+  <a href="#1-haproxy" class="md-nav__link">
+    1. HAProxyについて
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. インストール
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 設定
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 設定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#etchaproxyhaproxycfg" class="md-nav__link">
     /etc/haproxy/haproxy.cfg
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 起動
   </a>
   
 </li>
@@ -788,15 +815,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#haproxy" class="md-nav__link">
-    HAProxyについて
+  <a href="#1-haproxy" class="md-nav__link">
+    1. HAProxyについて
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. インストール
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 設定
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 設定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#etchaproxyhaproxycfg" class="md-nav__link">
     /etc/haproxy/haproxy.cfg
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 起動
   </a>
   
 </li>
@@ -820,7 +874,7 @@
 
 
 <h1 id="b1-4-haproxy">B1-4 HAProxy インストールと設定</h1>
-<h4 id="haproxy">HAProxyについて</h4>
+<h3 id="1-haproxy">1. HAProxyについて</h3>
 <blockquote>
 <p>HAProxyは、TCPおよびHTTPベースのアプリケーション向けのオープンソースのプロキシ、リバースプロキシ、および負荷分散ソリューションです1。以下に詳細を説明します。</p>
 <ul>
@@ -840,7 +894,8 @@
 <p>HAProxyは、高速で信頼性のあるロードバランサーとして、世界で最も訪れられているWebサイトの一部を支えています。</p>
 </blockquote>
 <p>【出典：COPILOT】</p>
-<h3 id="etchaproxyhaproxycfg">/etc/haproxy/haproxy.cfg</h3>
+<h3 id="2">2. インストール</h3>
+<h3 id="3">3. 設定</h3>
 <ul>
 <li>OpenShiftが提供するAPIのURLにアクセスがあったとき、ラウンドロビンでbootstrap/master/workerに分配する</li>
 <li>/etc/haproxy/haproxy.cfgファイルの末尾に以下を追記する。</li>
@@ -850,6 +905,7 @@
 <li><code>http-80</code>と<code>https-443</code>のパートに、workerの記載がある</li>
 <li>worker VMを追加、削除するときは、適宜該当行を追加、削除する</li>
 </ul>
+<h5 id="etchaproxyhaproxycfg">/etc/haproxy/haproxy.cfg</h5>
 <pre><code>frontend K8s-api
     bind *:6443
     option tcplog
@@ -906,6 +962,7 @@ backend https-443
     server  worker-1 worker-1.morifuku.com:443 check
     server  worker-2 worker-2.morifuku.com:443 check
 </code></pre>
+<h3 id="4">4. 起動</h3>
 
 
   
