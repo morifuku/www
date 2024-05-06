@@ -524,6 +524,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#openairinterface-5g" class="md-nav__link">
+    OpenAirInterface-5Gのデプロイ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#b1-openshift-415" class="md-nav__link">
     B1 OpenShift 4.15 インストール
   </a>
@@ -692,6 +699,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#openairinterface-5g" class="md-nav__link">
+    OpenAirInterface-5Gのデプロイ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#b1-openshift-415" class="md-nav__link">
     B1 OpenShift 4.15 インストール
   </a>
@@ -748,11 +762,12 @@
 <li>dnsmasqは、dnsサーバ、tftpサーバ、dhcpサーバとして使用しています。</li>
 <li>matchboxがhttpサーバ機能を持っているため、nginx等は入れていません。</li>
 </ul>
+<h4 id="openairinterface-5g">OpenAirInterface-5Gのデプロイ</h4>
 <p>下図のCNFをOpenShiftにデプロイします。</p>
 <p><img alt="OPENSHIFT-01" src="../img/openshift-02.jpg" /></p>
 <ul>
-<li>ベースはNASやNGAP等も実装ているのですが、OpenShift上でどう動いているのか調べてみたいと思います。</li>
-<li>SR-IOV/DPDK環境として、OpenShiftは高価なNICしかサポートしてないので、代替策を考えたいと思います。</li>
+<li>ベースのコードはSBIの他にNASやNGAP等もきっちり実装しているのですが、OpenShift上でどう動いているのか観察してみたいと思います。</li>
+<li>SR-IOV/DPDK環境として、OpenShiftはI350やX550サポートしてないので、代替策を考えたいと思います。</li>
 </ul>
 <h2 id="b1-openshift-415">B1 OpenShift 4.15 インストール</h2>
 <p>Ubuntu 22.04のベアメタルに、VirtualBoxでCoreOSのVMを立て、その上にOpenShift 4.15を構築します。
