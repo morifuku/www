@@ -12,8 +12,10 @@
         <meta name="author" content="Shigeru Morifuku">
       
       
-        <link rel="canonical" href="https://wiki.morifuku.net/basic/mail/">
+        <link rel="canonical" href="https://wiki.morifuku.net/openshift/install-overview/">
       
+      
+        <link rel="prev" href="../">
       
       
       <link rel="icon" href="../../assets/images/ladybug5G32.ico">
@@ -21,7 +23,7 @@
     
     
       
-        <title>postfix/dovecot設定 - wiki.morifuku.net</title>
+        <title>概要 - wiki.morifuku.net</title>
       
     
     
@@ -75,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#postfixdovecot" class="md-skip">
+        <a href="#b1-openshift-415" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              postfix/dovecot設定
+              概要
             
           </span>
         </div>
@@ -195,13 +197,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../openshift/" class="md-tabs__link">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
         B OpenShift編
       </a>
     </li>
@@ -448,14 +452,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
       
       
       
@@ -464,7 +470,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           B OpenShift編
@@ -477,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openshift/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         概要
       </a>
     </li>
@@ -489,16 +495,18 @@
               
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
       
       
       
@@ -507,7 +515,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
           B1 OpenShift 4.15 インストールと設定
@@ -518,11 +526,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../openshift/install-overview/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         概要
       </a>
+      
     </li>
   
 
@@ -631,42 +649,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#dns" class="md-nav__link">
-    DNSレコード設定
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gw" class="md-nav__link">
-    ホームGWのポートマッピング設定
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#firewalld" class="md-nav__link">
-    Firewalld設定例
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    証明書設定
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -683,74 +665,7 @@
   
 
 
-<h1 id="postfixdovecot">postfix/dovecot設定</h1>
-<h3 id="dns">DNSレコード設定</h3>
-<ul>
-<li>メールサーバのアドレスを広報する</li>
-<li>SPFも設定する</li>
-</ul>
-<pre><code>a mail 123.45.67.89
-mx mail.morifuku.net. 10
-txt @ v=spf1 mx ~all
-</code></pre>
-<h3 id="gw">ホームGWのポートマッピング設定</h3>
-<ul>
-<li>smtp(25)、pop3(110)の宛先を設定</li>
-<li>証明書取得にhttp(80)の宛先設定も必要</li>
-</ul>
-<h3 id="firewalld">Firewalld設定例</h3>
-<ul>
-<li>smtp(25)とpop3(110)を通過させる</li>
-<li>下例は「masquerade機能は残して、全ポートを空ける」設定。<code>target: ACCEPT</code>がみそ。</li>
-</ul>
-<pre><code># firewall-cmd --get-active-zone
-trusted
-  interfaces: eno1 eno2 eno3
-# firewall-cmd --list-all --zone=trusted
-trusted (active)
-  target: ACCEPT
-（中略）
-  masquerade: yes
-（後略）
-#
-</code></pre>
-<h3 id="_1">証明書設定</h3>
-<p>certbotインストール</p>
-<pre><code># yum install certbot
-</code></pre>
-<p>旧証明書を削除して、新たに作成</p>
-<pre><code># mv /etc/letsencrypt /etc/letsencrypt.bak
-# mkdir -m755 /etc/letsencrypt
-# certbot certonly --standalone -d mail.morifuku.net
-（agreeを求められたらYで回答）
-</code></pre>
-<p>作成した証明書の有効期限を確認してみる</p>
-<pre><code># certbot certificates
-Saving debug log to /var/log/letsencrypt/letsencrypt.log
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Found the following certs:
-  Certificate Name: mail.morifuku.net
-    Serial Number: 0123456789abcdef0123456789abcdef
-    Key Type: RSA
-    Domains: mail.morifuku.net
-    Expiry Date: 2023-12-14 00:28:09+00:00 (VALID: 89 days)
-    Certificate Path: /etc/letsencrypt/live/mail.morifuku.net/fullchain.pem
-    Private Key Path: /etc/letsencrypt/live/mail.morifuku.net/privkey.pem
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-</code></pre>
-<p>証明書更新</p>
-<ul>
-<li>有効期限が30日未満の証明書を更新する場合</li>
-</ul>
-<pre><code># certbot renew
-</code></pre>
-<ul>
-<li>強制更新する場合</li>
-</ul>
-<pre><code># certbot renew --force-renew
-</code></pre>
+<h1 id="b1-openshift-415">B1 OpenShift 4.15 インストールと設定</h1>
 
 
   

@@ -101,6 +101,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wiki.morifuku.net/openshift/install-overview/</loc>
+         <lastmod>2024-05-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wiki.morifuku.net/openshift/matchbox/</loc>
          <lastmod>2024-05-06</lastmod>
          <changefreq>daily</changefreq>
