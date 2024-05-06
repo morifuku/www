@@ -877,6 +877,24 @@
 
 <h1 id="b1-2-matchbox">B1-2 Matchbox インストールと設定</h1>
 <h3 id="1-matchbox">1. Matchboxについて</h3>
+<blockquote>
+<p>Matchboxは、ベアメタルマシンをプロファイルにマッチングして、PXEブートとクラスタのプロビジョニングを行うサービスです1. このツールは、MACアドレスやUUIDなどのラベルを使用してマシンをマッチングし、プロファイルはカーネル/ initrd、iPXE設定、およびIgnition設定を指定します。以下は</p>
+<p>Matchboxの主な特徴です:</p>
+<ul>
+<li>
+<p>iPXEチェーンロード: iPXEを介してハードウェアラベルをマッチングできます。</p>
+</li>
+<li>
+<p>Fedora CoreOSまたはFlatcar Linuxのプロビジョニング: Ignitionを使用してFedora CoreOSまたはFlatcar Linuxをプロビジョニングできます。</p>
+</li>
+<li>
+<p>認証付きgRPC API: クライアント（たとえばTerraform）向けの認証付きgRPC APIがあります。</p>
+</li>
+</ul>
+<p>Matchboxはバイナリまたはコンテナイメージとしてインストールでき、PXE対応のネットワークをセットアップすることができます。Terraformを使用してFedora CoreOSやFlatcar Linuxのマシンをプロビジョニングする方法も提供されています1。2。</p>
+<p>このツールは、ベアメタルクラスタのネットワークブートとプロビジョニングに役立ちます。</p>
+</blockquote>
+<p>【出典：COPILOT】</p>
 <h3 id="2">2. インストール</h3>
 <h3 id="3">3. 設定</h3>
 <pre><code># pwd
