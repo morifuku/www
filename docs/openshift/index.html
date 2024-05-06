@@ -715,18 +715,18 @@
 <p><img alt="OPENSHIFT-01" src="../img/openshift-01.jpg" /></p>
 <ul>
 <li>vmwareも考えましたが、Bastion環境を直接母艦に構築したいので、VirtualBoxにしました。</li>
-<li>Ubuntu標準のVirtualBoxは古く、PXEがうまく動作しなかったので、最新版に入れ替えました。</li>
-<li>VirtualBoxとPXEにより、OpenShiftの再インストールやworkerノードの増設が非常に高速になっています。</li>
+<li>Ubuntu標準のVirtualBoxはバージョンが古く、PXEがうまく動作しなかったので、最新版に入れ替えました。</li>
+<li>VirtualBoxとPXEにより、OpenShiftの再インストールやworkerノードの増設を手軽に行えます。</li>
 <li>dnsmasqは、dnsサーバ、tftpサーバ、dhcpサーバとして使用しています。</li>
-<li>matchboxがhttpサーバ機能を持っているため、nginx等のhttpサーバは入れていません。</li>
+<li>matchboxがhttpサーバ機能を持っているため、nginx等は入れていません。</li>
 </ul>
 <h2 id="b1-openshift-415">B1 OpenShift 4.15 インストール</h2>
 <p>Ubuntu 22.04のベアメタルに、VirtualBoxでCoreOSのVMを立て、その上にOpenShift 4.15を構築します。
 VMはPXEによる、ネットワークインストールとします。</p>
 <ul>
-<li>UbuntuベアメタルにBastion環境構築</li>
-<li>UbuntuベアメタルにPXE環境構築</li>
-<li>UbuntuベアメタルにVirtualBox VMを構築</li>
+<li>UbuntuベアメタルにVirtualBox環境構築</li>
+<li>Ubuntuベアメタルにmatchbox環境構築</li>
+<li>Ubuntuベアメタルにha-proxy環境構築</li>
 <li>VirtualBox VMにOpenShiftインストール</li>
 </ul>
 <h2 id="b2-persistent-volume">B2 Persistent Volume設定</h2>
@@ -735,6 +735,8 @@ VMはPXEによる、ネットワークインストールとします。</p>
 <p>OpenAirInterface 5Gを、OpenShiftでビルドするためのHelm環境を構築します。RedHatコンテナにライセンスが
 が必要となります。</p>
 <h2 id="b4-openairinterface-5g">B4 OpenAirInterface 5Gのビルド</h2>
+<p>下図のCNFをOpenShiftにデプロイします。</p>
+<p><img alt="OPENSHIFT-01" src="../img/openshift-02.jpg" /></p>
 
 
   
